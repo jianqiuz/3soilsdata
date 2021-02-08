@@ -1,0 +1,333 @@
+﻿New Table( "0-30 depth all pressures",
+	Add Rows( 32 ),
+	New Script(
+		"Source",
+		Open(
+			"C:\Users\SMIT467\Documents\DWP2013 Pore Water\DWP 20013 pore water FTICR.xlsx",
+			Worksheets( "0-30 depth all pressures" ),
+			Use for all sheets( 1 ),
+			Concatenate Worksheets( 0 ),
+			Create Concatenation Column( 0 ),
+			Worksheet Settings(
+				1,
+				Has Column Headers( 1 ),
+				Number of Rows in Headers( 1 ),
+				Headers Start on Row( 1 ),
+				Data Starts on Row( 2 ),
+				Data Starts on Column( 1 ),
+				Data Ends on Row( 0 ),
+				Data Ends on Column( 0 ),
+				Replicated Spanned Rows( 1 ),
+				Suppress Hidden Rows( 1 ),
+				Suppress Hidden Columns( 1 ),
+				Treat as Hierarchy( 0 )
+			)
+		)
+	),
+	New Column( "Sample",
+		Character,
+		Nominal,
+		Set Values(
+			{"1A", "7A", "11A", "19A", "19A2", "26A", "34A", "42A", "45A", "45A2",
+			"51A", "1B", "11B", "11B", "19B", "34B", "42B", "45B", "51B", "1C",
+			"11C", "26C", "34C", "42C", "51C", "19D", "26D", "34D", "42D", "45D",
+			"48D", "51D"}
+		)
+	),
+	New Column( "site",
+		Character,
+		Nominal,
+		Set Values(
+			{"DMT", "DMT", "PT", "PT", "PT", "PT", "PT", "GS", "GS", "GS", "GS",
+			"DMT", "PT", "PT", "PT", "PT", "GS", "GS", "PT", "DMT", "PT", "PT", "PT",
+			"GS", "GS", "PT", "PT", "PT", "GS", "GS", "GS", "GS"}
+		)
+	),
+	New Column( "depth",
+		Character,
+		Nominal,
+		Set Values(
+			{"0-30", "0-30", "0-30", "0-30", "0-30", "0-30", "0-30", "0-30", "0-30",
+			"0-30", "0-30", "0-30", "0-30", "0-30", "0-30", "0-30", "0-30", "0-30",
+			"0-30", "0-30", "0-30", "0-30", "0-30", "0-30", "0-30", "0-30", "0-30",
+			"0-30", "0-30", "0-30", "0-30", "0-30"}
+		)
+	),
+	New Column( "Pressure",
+		Character,
+		Nominal,
+		Set Values(
+			{"15", "15", "15", "15", "15", "15", "15", "15", "15", "15", "15", "30",
+			"30", "30", "30", "30", "30", "30", "30", "150", "150", "150", "150",
+			"150", "150", "500", "500", "500", "500", "500", "500", "500"}
+		)
+	),
+	New Column( "site_pc",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[1, 1, 3, 3, 3, 3, 3, 2, 2, 2, 2, 1, 3, 3, 3, 3, 2, 2, 3, 1, 3, 3, 3, 2,
+			2, 3, 3, 3, 2, 2, 2, 2]
+		)
+	),
+	New Column( "depth_pc",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+			1, 1, 1, 1, 1, 1, 1, 1]
+		)
+	),
+	New Column( "pressure_pc",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3,
+			3, 4, 4, 4, 4, 4, 4, 4]
+		)
+	),
+	New Column( "core_pc",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[1, 7, 11, 19, 19, 26, 34, 42, 45, 45, 51, 1, 11, 11, 19, 34, 42, 45, 51,
+			1, 11, 26, 34, 42, 51, 19, 26, 34, 42, 45, 48, 51]
+		)
+	),
+	New Column( "Core",
+		Character,
+		Nominal,
+		Set Values(
+			{"1", "7", "11", "19", "19", "26", "34", "42", "45", "45", "51", "1",
+			"11", "11", "19", "34", "42", "45", "51", "1", "11", "26", "34", "42",
+			"51", "19", "26", "34", "42", "45", "48", "51"}
+		)
+	),
+	New Column( "Lipid",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[14.79, 24.75, 32.81, 18.55, 11.89, 19.95, 13.04, 30.2, 21.91, 16.21,
+			23.79, 22.27, 15.42, 19.29, 10.77, 16.02, 8.44, 6.49, 22.85, 14.99, 15,
+			10.22, 14.62, 10.95, 26.89, 12.54, 14.9, 8.95, 10, 13.18, 21.67, 23.4]
+		)
+	),
+	New Column( "Unsaturated hydrocarbons",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[5.88, 5.08, 6.77, 7.93, 7.19, 8.73, 12.94, 6.6, 5.79, 8.22, 12.62, 2.84,
+			7.79, 5.41, 6.2, 8.24, 5.13, 5.41, 10.04, 4.82, 3.44, 14.07, 6.88, 5,
+			8.46, 9.38, 5.8, 5.59, 4.9, 6.73, 9.24, 10.94]
+		)
+	),
+	New Column( "Proteins",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[4.87, 13.39, 11.46, 5.97, 4.02, 5.99, 3.45, 2.28, 13.5, 5.02, 5.83,
+			5.06, 2.18, 11.12, 2.96, 5.03, 1.66, 1.95, 8.44, 5.62, 8.44, 2.64, 15.27,
+			3.21, 7.85, 3.08, 10.75, 12.62, 2.16, 12.62, 7.82, 8.51]
+		)
+	),
+	New Column( "Lignin",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[13.95, 16.44, 8.85, 12.46, 11.21, 14.46, 15.63, 7.87, 17.67, 13.01,
+			12.14, 18.8, 10.12, 16.73, 12.01, 13.04, 8.77, 14.29, 18.63, 22.49,
+			15.47, 16.59, 17.2, 10.29, 20.85, 11.12, 16, 21.09, 10.69, 14.03, 15.81,
+			17.33]
+		)
+	),
+	New Column( "carbohydrate",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[1.34, 1.36, 0.52, 1.9, 1.11, 2.49, 1.92, 1.52, 2.62, 1.83, 3.88, 1.26,
+			1.09, 2.07, 1.43, 1.83, 1.82, 2.81, 2.04, 1.34, 1.09, 2.2, 0.86, 1.04,
+			1.51, 1.58, 1.65, 3.51, 0.88, 2.24, 1.95, 3.04]
+		)
+	),
+	New Column( "Amino sugars",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[0.5, 1.36, 0.52, 1.38, 0.6, 1.75, 2.3, 1.27, 3.47, 0.91, 2.43, 0.95,
+			0.62, 3.05, 0.76, 0.92, 0.5, 1.3, 1.75, 1.07, 1.09, 2.64, 2.15, 1.04,
+			2.11, 0.95, 2.82, 3.35, 0.88, 2.52, 1.42, 1.52]
+		)
+	),
+	New Column( "Tannins",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[1.85, 0.68, 0.52, 2.47, 4.62, 1.25, 2.68, 1.27, 1.31, 3.65, 0.49, 2.69,
+			2.96, 1.57, 4.58, 3.66, 5.96, 3.03, 1.46, 1.87, 1.25, 2.31, 1.29, 3.4,
+			0.6, 4.18, 3.37, 3.51, 4.22, 2.66, 1.07, 0.76]
+		)
+	),
+	New Column( "Condensed hydrocarbons",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[15.8, 6.1, 4.17, 11.77, 18.39, 10.22, 10.64, 8.88, 7.79, 15.3, 8.25,
+			13.27, 18.38, 9.45, 20.69, 15.33, 24.17, 24.68, 4.37, 16.33, 13.59,
+			11.43, 10.11, 21.06, 2.72, 18.45, 12.94, 11.34, 20.88, 12.34, 6.04, 3.34
+			]
+		)
+	),
+	New Column( "CHO (aldehyde)",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[19.33, 38.31, 28.65, 12.87, 9.84, 11.97, 11.51, 10.66, 25.93, 12.33,
+			12.62, 24.49, 8.57, 23.52, 8.67, 12.36, 4.64, 9.96, 19.36, 29.72, 25.47,
+			10, 24.52, 14.16, 23.56, 8.91, 24.78, 21.09, 6.86, 21.74, 16.87, 18.54]
+		)
+	),
+	New Column( "CHON",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[10.59, 9.15, 16.67, 11.77, 10.69, 16.21, 12.46, 14.97, 13.35, 15.75,
+			17.96, 9.48, 10.59, 10.93, 9.25, 15.79, 7.45, 10.82, 15.14, 7.5, 7.19,
+			11.98, 9.68, 7.74, 12.39, 9.94, 8.94, 10.38, 8.33, 12.34, 12.97, 13.83]
+		)
+	),
+	New Column( "CHOS",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[24.87, 22.37, 16.67, 16.94, 22.75, 21.7, 20.33, 20.56, 23.3, 23.97,
+			17.48, 24.8, 25.08, 25.59, 26.69, 23.8, 27.98, 26.19, 10.63, 23.16,
+			29.38, 20.22, 34.84, 26.63, 7.25, 24.84, 28.47, 35.14, 24.02, 30.01,
+			9.24, 11.7]
+		)
+	),
+	New Column( "CHOP",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[5.38, 4.07, 7.29, 5.17, 8.9, 9.48, 14, 5.08, 5.86, 7.76, 9.71, 6.95,
+			6.07, 5.31, 7.15, 7.78, 6.13, 8.01, 4.08, 7.1, 4.84, 15.6, 6.02, 6.33,
+			6.04, 9.15, 5.18, 7.19, 7.25, 4.77, 6.39, 6.38]
+		)
+	),
+	New Column( "CHONS",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[14.96, 13.56, 10.42, 26.25, 18.91, 13.22, 10.93, 17.77, 12.89, 14.16,
+			15.05, 13.74, 17.45, 15.26, 18.49, 14.19, 21.52, 11.69, 31, 11.65, 14.06,
+			11.98, 10.75, 17.28, 29.61, 17.51, 17.18, 10.86, 18.82, 14.59, 31.79,
+			29.79]
+		)
+	),
+	New Column( "CHONP",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[7.9, 4.75, 8.33, 12.52, 9.41, 10.97, 12.75, 10.91, 7.33, 9.82, 11.17,
+			7.58, 10.59, 5.81, 8.87, 9.84, 9.11, 11.26, 12.08, 5.35, 4.38, 11.54,
+			5.59, 6.52, 13.6, 9.23, 5.33, 5.91, 9.31, 5.05, 12.79, 11.85]
+		)
+	),
+	New Column( "CHOSP",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[4.87, 2.54, 6.25, 5.51, 7.7, 6.73, 8.92, 9.9, 4.55, 6.85, 9.22, 4.27,
+			8.1, 5.61, 8.67, 6.86, 7.78, 8.66, 3.78, 4.55, 2.5, 8.35, 3.66, 5.29,
+			3.32, 8.04, 2.98, 4.63, 10.49, 4.35, 3.37, 3.5]
+		)
+	),
+	New Column( "CHONSP",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[12.1, 5.25, 5.73, 8.96, 11.8, 9.73, 9.11, 10.15, 6.79, 9.36, 6.8, 8.69,
+			13.55, 7.97, 12.2, 9.38, 15.4, 13.42, 3.93, 10.98, 12.19, 10.33, 4.95,
+			16.05, 4.23, 12.38, 7.14, 4.79, 14.9, 7.15, 6.57, 4.41]
+		)
+	),
+	Set Row States(
+		[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		1, 1, 1, 1, 1, 1, 1]
+	)
+);
+Fit Group(
+	Oneway( Y( :Lipid ), X( :site ) ),
+	Oneway( Y( :Lipid ), X( :Pressure ) ),
+	Oneway( Y( :Lipid ), X( :Core ) ),
+	Oneway( Y( :Unsaturated hydrocarbons ), X( :site ) ),
+	Oneway( Y( :Unsaturated hydrocarbons ), X( :Pressure ) ),
+	Oneway(
+		Y( :Unsaturated hydrocarbons ),
+		X( :Core ),
+		All Pairs( 1 ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 ),
+		Comparison Circles( 1 )
+	),
+	Oneway( Y( :Proteins ), X( :site ) ),
+	Oneway( Y( :Proteins ), X( :Pressure ) ),
+	Oneway( Y( :Proteins ), X( :Core ) ),
+	Oneway( Y( :Lignin ), X( :site ) ),
+	Oneway( Y( :Lignin ), X( :Pressure ) ),
+	Oneway(
+		Y( :Lignin ),
+		X( :Core ),
+		All Pairs( 1 ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 ),
+		Comparison Circles( 1 )
+	),
+	Oneway( Y( :carbohydrate ), X( :site ) ),
+	Oneway( Y( :carbohydrate ), X( :Pressure ) ),
+	Oneway( Y( :carbohydrate ), X( :Core ) ),
+	Oneway( Y( :Amino sugars ), X( :site ) ),
+	Oneway( Y( :Amino sugars ), X( :Pressure ) ),
+	Oneway( Y( :Amino sugars ), X( :Core ) ),
+	Oneway( Y( :Tannins ), X( :site ) ),
+	Oneway( Y( :Tannins ), X( :Pressure ) ),
+	Oneway(
+		Y( :Tannins ),
+		X( :Core ),
+		All Pairs( 1 ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 ),
+		Comparison Circles( 1 )
+	),
+	Oneway( Y( :Condensed hydrocarbons ), X( :site ) ),
+	Oneway( Y( :Condensed hydrocarbons ), X( :Pressure ) ),
+	Oneway(
+		Y( :Condensed hydrocarbons ),
+		X( :Core ),
+		All Pairs( 1 ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 ),
+		Comparison Circles( 1 )
+	),
+	<<{Arrange in Rows( 3 )}
+);

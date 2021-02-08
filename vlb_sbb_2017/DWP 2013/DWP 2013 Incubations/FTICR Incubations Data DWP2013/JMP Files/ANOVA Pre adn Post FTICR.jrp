@@ -1,0 +1,68 @@
+﻿Open(
+	"C:\Users\SMIT467\Documents\DWP Experiments\DWP 2013\FTICR Incubations Data DWP2013\normalizeed % dwp2013.jmp"
+);
+Fit Group(
+	Oneway(
+		Y( :Lipid ),
+		X( :Name( "Pre/post Incubation" ) ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Unsaturated hydrocarbons ),
+		X( :Name( "Pre/post Incubation" ) ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Proteins ),
+		X( :Name( "Pre/post Incubation" ) ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Lignin ),
+		X( :Name( "Pre/post Incubation" ) ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :carbohydrate ),
+		X( :Name( "Pre/post Incubation" ) ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Amino sugars ),
+		X( :Name( "Pre/post Incubation" ) ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Tannins ),
+		X( :Name( "Pre/post Incubation" ) ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Condensed hydrocarbons ),
+		X( :Name( "Pre/post Incubation" ) ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	<<{Arrange in Rows( 1 )},
+	SendToReport(
+		Dispatch(
+			{"Fit Group"},
+			"Oneway Analysis of Unsaturated hydrocarbons By Pre/post Incubation",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Fit Group"},
+			"Oneway Analysis of Proteins By Pre/post Incubation",
+			OutlineBox,
+			{Close( 1 )}
+		)
+	)
+);

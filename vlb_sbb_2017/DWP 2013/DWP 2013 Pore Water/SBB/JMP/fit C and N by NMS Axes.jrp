@@ -1,0 +1,82 @@
+﻿Open(
+	"C:\Users\SMIT467\Documents\DWP Experiments\DWP 2013\DWP 2013 Pore Water\SBB short communication\0-90 A, D paired sampleswith CN.jmp"
+);
+Fit Group(
+	Bivariate( Y( :Name( "TC [mg/l]" ) ), X( :Axis 1 ) ),
+	Bivariate(
+		Y( :Name( "TC [mg/l]" ) ),
+		X( :Axis 2 ),
+		Fit Line( {Line Color( {213, 72, 87} )} )
+	),
+	Bivariate( Y( :Name( "TC [mg/l]" ) ), X( :Axis 3 ) ),
+	Bivariate( Y( :Name( "TC [mg/l]" ) ), X( :Name( "% unassigned" ) ) ),
+	Bivariate(
+		Y( :Name( "TN [mg/l]" ) ),
+		X( :Axis 1 ),
+		Fit Line( {Line Color( {213, 72, 87} )} )
+	),
+	Bivariate(
+		Y( :Name( "TN [mg/l]" ) ),
+		X( :Axis 2 ),
+		Fit Line( {Line Color( {213, 72, 87} )} )
+	),
+	Bivariate(
+		Y( :Name( "TN [mg/l]" ) ),
+		X( :Axis 3 ),
+		Fit Line( {Line Color( {213, 72, 87} )} )
+	),
+	Bivariate( Y( :Name( "TN [mg/l]" ) ), X( :Name( "% unassigned" ) ) ),
+	Bivariate(
+		Y( :logTC ),
+		X( :Axis 1 ),
+		Fit Line( {Line Color( {213, 72, 87} )} )
+	),
+	Bivariate(
+		Y( :logTC ),
+		X( :Axis 2 ),
+		Fit Line( {Line Color( {213, 72, 87} )} )
+	),
+	Bivariate(
+		Y( :logTC ),
+		X( :Axis 3 ),
+		Fit Line( {Line Color( {213, 72, 87} )} )
+	),
+	Bivariate( Y( :logTC ), X( :Name( "% unassigned" ) ) ),
+	Bivariate(
+		Y( :logTN ),
+		X( :Axis 1 ),
+		Fit Line( {Line Color( {213, 72, 87} )} )
+	),
+	Bivariate(
+		Y( :logTN ),
+		X( :Axis 2 ),
+		Fit Line( {Line Color( {213, 72, 87} )} )
+	),
+	Bivariate(
+		Y( :logTN ),
+		X( :Axis 3 ),
+		Fit Line( {Line Color( {213, 72, 87} )} )
+	),
+	Bivariate( Y( :logTN ), X( :Name( "% unassigned" ) ) ),
+	<<{Arrange in Rows( 4 )},
+	SendToReport(
+		Dispatch(
+			{"Fit Group"},
+			"Bivariate Fit of TN [mg/l] By Axis 1",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Fit Group"},
+			"Bivariate Fit of logTC By Axis 3",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Fit Group"},
+			"Bivariate Fit of logTN By Axis 1",
+			OutlineBox,
+			{Close( 1 )}
+		)
+	)
+);

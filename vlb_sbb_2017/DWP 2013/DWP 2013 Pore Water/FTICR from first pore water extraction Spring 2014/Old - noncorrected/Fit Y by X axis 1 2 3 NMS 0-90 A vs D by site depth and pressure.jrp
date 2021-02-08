@@ -1,0 +1,215 @@
+﻿New Table( "NMS Scores 0-90 A vs D",
+	Add Rows( 50 ),
+	New Script(
+		"Source",
+		Open(
+			"C:\Users\SMIT467\Documents\DWP2013 Pore Water\NMS Scores 0-90 A vs D.xlsx",
+			Worksheets( "NMS Scores 0-90 A vs D.xls" ),
+			Use for all sheets( 1 ),
+			Concatenate Worksheets( 0 ),
+			Create Concatenation Column( 0 ),
+			Worksheet Settings(
+				1,
+				Has Column Headers( 1 ),
+				Number of Rows in Headers( 1 ),
+				Headers Start on Row( 1 ),
+				Data Starts on Row( 2 ),
+				Data Starts on Column( 1 ),
+				Data Ends on Row( 0 ),
+				Data Ends on Column( 0 ),
+				Replicated Spanned Rows( 1 ),
+				Suppress Hidden Rows( 1 ),
+				Suppress Hidden Columns( 1 ),
+				Treat as Hierarchy( 0 )
+			)
+		)
+	),
+	New Column( "Sample",
+		Character,
+		Nominal,
+		Set Values(
+			{"1A", "7A", "11A", "19A", "19A2", "26A", "34A", "42A", "45A", "45A2",
+			"51A", "5A", "8A", "12A", "20A", "27A", "35A", "46A", "49A", "52A",
+			"52A", "6A", "13A", "21A", "28A", "36A", "44A", "47A", "50A", "53A",
+			"19D", "26D", "34D", "42D", "45D", "48D", "51D", "2D", "8D", "10D",
+			"12D", "20D", "27D", "27D", "35D", "49D", "28D", "36D", "47D", "50D"}
+		)
+	),
+	New Column( "pressure",
+		Character,
+		Nominal,
+		Set Values(
+			{"A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A",
+			"A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A",
+			"A", "A", "D", "D", "D", "D", "D", "D", "D", "D", "D", "D", "D", "D",
+			"D", "D", "D", "D", "D", "D", "D", "D"}
+		)
+	),
+	New Column( "site",
+		Character,
+		Nominal,
+		Set Values(
+			{"DMT", "DMT", "PT", "PT", "PT", "PT", "PT", "GS", "GS", "GS", "GS",
+			"DMT", "DMT", "PT", "PT", "PT", "PT", "GS", "GS", "GS", "GS", "DMT",
+			"PT", "PT", "PT", "PT", "GS", "GS", "GS", "GS", "PT", "PT", "PT", "GS",
+			"GS", "GS", "GS", "DMT", "DMT", "DMT", "PT", "PT", "PT", "PT", "PT",
+			"GS", "PT", "PT", "GS", "GS"}
+		)
+	),
+	New Column( "depth",
+		Character,
+		Nominal,
+		Set Values(
+			{"0-30", "0-30", "0-30", "0-30", "0-30", "0-30", "0-30", "0-30", "0-30",
+			"0-30", "0-30", "30-60", "30-60", "30-60", "30-60", "30-60", "30-60",
+			"30-60", "30-60", "30-60", "30-60", "60-90", "60-90", "60-90", "60-90",
+			"60-90", "60-90", "60-90", "60-90", "60-90", "0-30", "0-30", "0-30",
+			"0-30", "0-30", "0-30", "0-30", "30-60", "30-60", "30-60", "30-60",
+			"30-60", "30-60", "30-60", "30-60", "30-60", "60-90", "60-90", "60-90",
+			"60-90"}
+		)
+	),
+	New Column( "Axis 1",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[0.657859981, -1.030590057, -1.523849964, 0.149130002, 1.172369957, -
+			0.112719998, 0.627699971, -0.708469987, -0.710680008, 0.592239976, -
+			0.472669989, -0.120499998, 0.458600014, -0.601170003, 0.101199999, -
+			0.485049993, 0.195549995, -0.75977999, -0.824509978, 0.741509974, -
+			1.026419997, -1.077029943, -0.591620028, 0.473870009, -0.207049996, -
+			0.982900023, 0.274639994, -1.199409962, -0.232150003, -0.152989998,
+			1.162160039, 0.248809993, 0.293680012, 1.548679948, 0.223989993, -
+			0.546920002, -0.806100011, -0.155990005, 0.516480029, 0.272229999,
+			1.427559972, 0.534420013, -0.214049995, -0.173930004, 0.05762,
+			0.811249971, 0.101549998, 0.598140001, 0.487819999, 0.987469971]
+		)
+	),
+	New Column( "Axis 2",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[-0.129199997, 0.279410005, -0.749080002, -0.189290002, -0.439179987,
+			0.034449998, 0.372900009, -1.165109992, 0.531260014, -0.198949993, -
+			0.087180004, -0.216000006, -0.341300011, -1.468899965, -0.125349998,
+			0.917999983, 0.637229979, -0.552330017, -0.350030005, 0.388119996,
+			0.247759998, 0.275040001, -0.808080018, 0.204459995, -0.35620001, -
+			0.01127, -0.47894001, 0.378010005, -0.348150015, 0.367850006, -
+			0.398640007, 0.436450005, 1.213459969, -0.577380002, 0.519079983,
+			0.199239999, 0.437460005, -0.14869, -0.288989991, 0.626999974, -
+			0.866029978, -0.297060013, 0.082560003, 0.693799973, 0.461329997,
+			0.695580006, 0.168760002, -0.0233, 0.196720004, 0.248669997]
+		)
+	),
+	New Column( "Axis 3",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[-0.338620007, -0.295619994, -0.249520004, 0.064769998, -0.277839988,
+			0.228770003, 0.547930002, 0.23883, -0.209859997, -0.070830002,
+			0.716929972, 0.409009993, 0.22868, 0.0173, 0.482450008, -0.671079993,
+			0.225339994, -0.215920001, -0.538049996, 0.605729997, -0.049260002, -
+			0.73496002, -0.03528, -0.990769982, 0.739279985, -0.064970002, -
+			0.72299999, 0.099550001, 0.657310009, 0.351399988, -0.00554, -
+			0.471799999, -0.662320018, -0.615830004, -0.480529994, 0.362269998,
+			0.602110028, -0.269760013, 0.063390002, 0.530369997, -0.585990012,
+			0.085859999, 0.251969993, -0.502759993, 0.550989985, 0.590269983, -
+			0.665030003, 0.940729976, -0.198880002, 0.332830012]
+		)
+	)
+);
+Fit Group(
+	Oneway(
+		Y( :Axis 1 ),
+		X( :pressure ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway( Y( :Axis 1 ), X( :site ), Name( "Means/Anova" )(1), Mean Diamonds( 1 ) ),
+	Oneway(
+		Y( :Axis 1 ),
+		X( :depth ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Axis 2 ),
+		X( :pressure ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway( Y( :Axis 2 ), X( :site ), Name( "Means/Anova" )(1), Mean Diamonds( 1 ) ),
+	Oneway(
+		Y( :Axis 2 ),
+		X( :depth ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Axis 3 ),
+		X( :pressure ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway( Y( :Axis 3 ), X( :site ), Name( "Means/Anova" )(1), Mean Diamonds( 1 ) ),
+	Oneway(
+		Y( :Axis 3 ),
+		X( :depth ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	<<{Arrange in Rows( 3 )},
+	SendToReport(
+		Dispatch(
+			{},
+			"Oneway Analysis of Axis 1 By site",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Oneway Analysis of Axis 1 By depth",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Oneway Analysis of Axis 2 By pressure",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Oneway Analysis of Axis 2 By site",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Oneway Analysis of Axis 2 By depth",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Oneway Analysis of Axis 3 By pressure",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Oneway Analysis of Axis 3 By site",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Oneway Analysis of Axis 3 By depth",
+			OutlineBox,
+			{Close( 1 )}
+		)
+	)
+);

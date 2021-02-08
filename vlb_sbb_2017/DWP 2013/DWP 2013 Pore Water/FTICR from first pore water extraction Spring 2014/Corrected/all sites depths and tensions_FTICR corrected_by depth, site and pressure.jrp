@@ -1,0 +1,284 @@
+﻿Open(
+	"C:\Users\SMIT467\Documents\DWP Experiments\DWP 2013\DWP 2013 Pore Water\FTICR from first pore water extraction Spring 2014\Corrected\all sites depths and tensions_FTICR corrected.jmp"
+);
+Fit Group(
+	Oneway( Y( :Lipid ), X( :Core# ), Name( "Means/Anova" )(1), Mean Diamonds( 1 ) ),
+	Oneway( Y( :Lipid ), X( :depth ), Name( "Means/Anova" )(1), Mean Diamonds( 1 ) ),
+	Oneway(
+		Y( :Lipid ),
+		X( :tension ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Lipid ),
+		X( :Site ),
+		All Pairs( 1 ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 ),
+		Comparison Circles( 1 )
+	),
+	Oneway( Y( :Unsaturated hydrocarbons ), X( :Core# ) ),
+	Oneway(
+		Y( :Unsaturated hydrocarbons ),
+		X( :depth ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Unsaturated hydrocarbons ),
+		X( :tension ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Unsaturated hydrocarbons ),
+		X( :Site ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway( Y( :Proteins ), X( :Core# ) ),
+	Oneway(
+		Y( :Proteins ),
+		X( :depth ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Proteins ),
+		X( :tension ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Proteins ),
+		X( :Site ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway( Y( :Lignin ), X( :Core# ) ),
+	Oneway(
+		Y( :Lignin ),
+		X( :depth ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Lignin ),
+		X( :tension ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway( Y( :Lignin ), X( :Site ), Name( "Means/Anova" )(1), Mean Diamonds( 1 ) ),
+	Oneway( Y( :carbohydrate ), X( :Core# ) ),
+	Oneway(
+		Y( :carbohydrate ),
+		X( :depth ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :carbohydrate ),
+		X( :tension ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :carbohydrate ),
+		X( :Site ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway( Y( :Amino sugars ), X( :Core# ) ),
+	Oneway(
+		Y( :Amino sugars ),
+		X( :depth ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Amino sugars ),
+		X( :tension ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Amino sugars ),
+		X( :Site ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway( Y( :Tannins ), X( :Core# ) ),
+	Oneway(
+		Y( :Tannins ),
+		X( :depth ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Tannins ),
+		X( :tension ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Tannins ),
+		X( :Site ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway( Y( :Condensed hydrocarbons ), X( :Core# ) ),
+	Oneway(
+		Y( :Condensed hydrocarbons ),
+		X( :depth ),
+		All Pairs( 1 ),
+		Name( "Means/Anova" )(1),
+		Points( 0 ),
+		Box Plots( 1 ),
+		Comparison Circles( 1 ),
+		Grand Mean( 0 )
+	),
+	Oneway(
+		Y( :Condensed hydrocarbons ),
+		X( :tension ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	Oneway(
+		Y( :Condensed hydrocarbons ),
+		X( :Site ),
+		Name( "Means/Anova" )(1),
+		Mean Diamonds( 1 )
+	),
+	<<{Arrange in Rows( 4 )},
+	SendToReport(
+		Dispatch(
+			{"Fit Group"},
+			"Oneway Analysis of Lipid By Core#",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Fit Group"},
+			"Oneway Analysis of Lipid By depth",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Fit Group"},
+			"Oneway Analysis of Unsaturated hydrocarbons By depth",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Fit Group"},
+			"Oneway Analysis of Unsaturated hydrocarbons By Site",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Fit Group"},
+			"Oneway Analysis of Proteins By depth",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Fit Group"},
+			"Oneway Analysis of Proteins By tension",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Fit Group"},
+			"Oneway Analysis of Proteins By Site",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Fit Group"},
+			"Oneway Analysis of Lignin By tension",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Fit Group"},
+			"Oneway Analysis of carbohydrate By depth",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Fit Group"},
+			"Oneway Analysis of carbohydrate By tension",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Fit Group"},
+			"Oneway Analysis of carbohydrate By Site",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Fit Group"},
+			"Oneway Analysis of Amino sugars By tension",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Fit Group"},
+			"Oneway Analysis of Tannins By depth",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Oneway Analysis of Condensed hydrocarbons By depth"},
+			"Oneway Plot",
+			FrameBox,
+			{DispatchSeg(
+				Box Plot Seg( 1 ),
+				{Box Style( "Outlier" ), Line Color( "Red" )}
+			), DispatchSeg(
+				Box Plot Seg( 2 ),
+				{Box Style( "Outlier" ), Line Color( "Red" )}
+			), DispatchSeg(
+				Box Plot Seg( 3 ),
+				{Box Style( "Outlier" ), Line Color( "Red" )}
+			), DispatchSeg(
+				Box Plot Seg( 4 ),
+				{Box Style( "Outlier" ), Line Color( "Red" )}
+			), DispatchSeg(
+				Box Plot Seg( 5 ),
+				{Box Style( "Outlier" ), Line Color( "Red" )}
+			), DispatchSeg(
+				Box Plot Seg( 6 ),
+				{Box Style( "Outlier" ), Line Color( "Red" )}
+			), DispatchSeg(
+				Box Plot Seg( 7 ),
+				{Box Style( "Outlier" ), Line Color( "Red" )}
+			), DispatchSeg(
+				Box Plot Seg( 8 ),
+				{Box Style( "Outlier" ), Line Color( "Red" )}
+			)}
+		),
+		Dispatch(
+			{"Oneway Analysis of Condensed hydrocarbons By depth"},
+			"Means Comparisons",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Oneway Analysis of Condensed hydrocarbons By depth",
+			"Means Comparisons", "Comparisons for all pairs using Tukey-Kramer HSD"},
+			"Connecting Letters Report",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Oneway Analysis of Condensed hydrocarbons By depth",
+			"Means Comparisons", "Comparisons for all pairs using Tukey-Kramer HSD"},
+			"Ordered Differences Report",
+			OutlineBox,
+			{Close( 1 )}
+		)
+	)
+);

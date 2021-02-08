@@ -1,0 +1,31 @@
+﻿Open(
+	"C:\Users\SMIT467\Documents\DWP Experiments\DWP 2013\DWP 2013 Pore Water\SBB short communication\DWP2013 solube C paired A D.jmp"
+);
+Fit Group(
+	Fit Model(
+		Y( :logTC ),
+		Effects( :PoreWater Fraction ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Effect Leverage" ),
+		Run(
+			:logTC << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :logTN ),
+		Effects( :PoreWater Fraction ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Effect Leverage" ),
+		Run(
+			:logTN << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	)
+);

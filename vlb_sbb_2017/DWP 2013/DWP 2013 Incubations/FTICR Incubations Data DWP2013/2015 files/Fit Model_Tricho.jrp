@@ -1,0 +1,370 @@
+﻿New Table( "Tricho",
+	Add Rows( 20 ),
+	New Script(
+		"Source",
+		Data Table( "FITCR Rel% Transposed _with NMS axis" ) <<
+		Subset(
+			Output Table( "Tricho" ),
+			Selected Rows( 0 ),
+			Rows(
+				[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 41, 42, 43, 44, 45, 46, 47, 48,
+				49, 50]
+			)
+		)
+	),
+	New Column( "Sample ID",
+		Character,
+		Nominal,
+		Set Values(
+			{"11A pre", "11C pre", "13A pre", "13C pre", "26A pre", "26C pre",
+			"34A pre", "34C pre", "52A pre", "52C pre", "11A Tricho", "11C Tricho",
+			"13A Tricho", "13C Tricho", "26A Tricho", "26C Tricho", "34A Tricho",
+			"34C Tricho", "52A Tricho", "52C Tricho"}
+		)
+	),
+	New Column( "Core/Pore ID",
+		Character,
+		Nominal,
+		Set Values(
+			{"11A", "11C", "13A", "13C", "26A", "26C", "34A", "34C", "52A", "52C",
+			"11A", "11C", "13A", "13C", "26A", "26C", "34A", "34C", "52A", "52C"}
+		)
+	),
+	New Column( "Pre/post Incubation",
+		Character,
+		Nominal,
+		Set Values(
+			{"pre-incubation", "pre-incubation", "pre-incubation", "pre-incubation",
+			"pre-incubation", "pre-incubation", "pre-incubation", "pre-incubation",
+			"pre-incubation", "pre-incubation", "post-incubation", "post-incubation",
+			"post-incubation", "post-incubation", "post-incubation",
+			"post-incubation", "post-incubation", "post-incubation",
+			"post-incubation", "post-incubation"}
+		)
+	),
+	New Column( "Core",
+		Character,
+		Nominal,
+		Set Values(
+			{"11", "11", "13", "13", "26", "26", "34", "34", "52", "52", "11", "11",
+			"13", "13", "26", "26", "34", "34", "52", "52"}
+		)
+	),
+	New Column( "tension",
+		Character,
+		Nominal,
+		Set Values(
+			{"15 mb", "150 mb", "15 mb", "150 mb", "15 mb", "150 mb", "15 mb",
+			"150 mb", "15 mb", "150 mb", "15 mb", "150 mb", "15 mb", "150 mb",
+			"15 mb", "150 mb", "15 mb", "150 mb", "15 mb", "150 mb"}
+		)
+	),
+	New Column( "inoculant",
+		Character,
+		Nominal,
+		Set Values(
+			{"pre", "pre", "pre", "pre", "pre", "pre", "pre", "pre", "pre", "pre",
+			"Tricho", "Tricho", "Tricho", "Tricho", "Tricho", "Tricho", "Tricho",
+			"Tricho", "Tricho", "Tricho"}
+		)
+	),
+	New Column( "Lipid",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[9.791584742, 9.487459106, 8.919506889, 5.560098119, 6.183206107,
+			6.241331484, 10.36992116, 11.00478469, 13.23529412, 11.08312343,
+			9.957870548, 8.80773362, 10.50228311, 8.67979577, 8.779443255,
+			9.976433621, 10.66698772, 11.24580861, 9.68715697, 10.64763996]
+		)
+	),
+	New Column( "Unsaturated hydrocarbons",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[1.297679906, 1.090512541, 2.828136331, 2.04415372, 0.916030534,
+			1.664355062, 3.881140085, 3.26953748, 3.792569659, 2.644836272,
+			2.872462658, 2.721088435, 2.922374429, 2.297592998, 3.211991435,
+			2.566116784, 2.745003612, 2.65669332, 3.018660812, 2.085620198]
+		)
+	),
+	New Column( "Proteins",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[2.831301612, 1.635768811, 1.232777375, 0.817661488, 1.526717557,
+			1.941747573, 4.366282596, 3.03030303, 1.93498452, 5.793450882,
+			1.45538108, 1.611170784, 2.00913242, 1.604668125, 1.998572448,
+			3.168368683, 3.154346256, 2.734072737, 2.030735456, 3.293084523]
+		)
+	),
+	New Column( "Lignin",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[2.35941801, 2.617230098, 3.045685279, 2.207686018, 2.366412214,
+			1.109570042, 3.456640388, 3.189792663, 2.476780186, 1.889168766,
+			3.44695519, 3.831006087, 3.652968037, 3.245805981, 3.497501784,
+			4.084838963, 3.635925837, 3.71421202, 3.046103183, 2.68935236]
+		)
+	),
+	New Column( "carbohydrate",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[0.314589068, 0.327153762, 1.160261059, 0.245298446, 0.152671756,
+			0.138696255, 0.545785324, 0.637958533, 0.154798762, 0.377833753,
+			1.225584067, 0.859291085, 1.187214612, 1.021152443, 1.284796574,
+			0.890285415, 0.626053455, 0.876966727, 1.427003293, 0.878155873]
+		)
+	),
+	New Column( "Amino sugars",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[0.235941801, 0.327153762, 0.652646846, 0.408830744, 0.305343511,
+			0.416088766, 0.485142511, 0.079744817, 0.232198142, 0.755667506,
+			0.459594025, 0.393841747, 0.684931507, 0.692924872, 0.713775874,
+			0.91647028, 0.626053455, 0.748001032, 0.686059276, 0.823271131]
+		)
+	),
+	New Column( "Tannins",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[0.904443571, 2.508178844, 0.94271211, 0.735895339, 0.534351145,
+			0.27739251, 0.667070952, 0.398724083, 1.238390093, 0.125944584,
+			0.995787055, 2.398854279, 0.456621005, 0.838803793, 1.463240542,
+			0.837915685, 0.842764267, 1.160691256, 1.372118551, 0.27442371]
+		)
+	),
+	New Column( "Condensed hydrocarbons",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[4.836806921, 7.19738277, 5.511240029, 6.21422731, 4.961832061,
+			2.635228849, 4.851425106, 3.03030303, 4.334365325, 1.133501259,
+			4.825737265, 10.4189044, 4.703196347, 6.163384391, 7.708779443,
+			5.106048704, 5.971586805, 7.273665205, 7.327113063, 2.96377607]
+		)
+	),
+	New Column( "Other",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[77.42823437, 74.80916031, 75.70703408, 81.76614881, 83.05343511,
+			85.57558946, 71.37659187, 75.35885167, 72.6006192, 76.19647355,
+			74.76062811, 68.95810956, 73.88127854, 75.45587163, 71.34189864,
+			72.45352186, 71.73127859, 69.58988909, 71.4050494, 76.34467618]
+		)
+	),
+	New Column( "CHO",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[3.893039717, 4.252998909, 2.900652647, 1.798855274, 1.755725191,
+			1.941747573, 3.33535476, 3.74800638, 4.334365325, 3.274559194,
+			3.178858675, 3.437164339, 3.150684932, 3.282275711, 3.390435403,
+			4.189578424, 4.165663376, 4.952282693, 3.732162459, 3.183315038]
+		)
+	),
+	New Column( "CHON",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[3.971686984, 4.471101418, 5.656272661, 3.679476697, 4.122137405,
+			3.19001387, 7.519708914, 5.980861244, 7.585139319, 6.423173804,
+			8.310991957, 7.662012173, 8.949771689, 6.965718454, 9.207708779,
+			7.960199005, 7.60895738, 8.124838793, 8.260153677, 7.738748628]
+		)
+	),
+	New Column( "CHOS",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[5.662603225, 14.39476554, 6.163886875, 8.585445626, 5.496183206,
+			5.409153953, 8.853850819, 10.20733652, 9.133126935, 8.942065491,
+			7.736499426, 9.237379162, 6.98630137, 7.293946025, 8.957887223,
+			6.389107096, 6.35685047, 6.525664173, 8.040614709, 6.092206367]
+		)
+	),
+	New Column( "CHOP",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[1.337003539, 2.508178844, 2.393038434, 2.289452167, 2.442748092,
+			1.803051318, 2.971497878, 1.993620415, 2.941176471, 2.392947103,
+			2.297970126, 3.401360544, 2.374429224, 2.297592998, 3.033547466,
+			2.827965436, 2.913556465, 3.198349239, 2.607025247, 2.305159166]
+		)
+	),
+	New Column( "CHONS",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[7.314195832, 6.106870229, 6.381435823, 7.031888798, 6.870229008,
+			5.131761442, 7.580351728, 6.459330144, 7.352941176, 5.289672544,
+			7.2769054, 9.165771572, 6.484018265, 8.059810357, 9.528907923,
+			8.117308196, 9.776065495, 10.75573897, 8.122941822, 6.805708013]
+		)
+	),
+	New Column( "CHONP",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[7.235548565, 4.689203926, 7.976794779, 4.006541292, 4.27480916,
+			2.080443828, 6.003638569, 4.864433812, 7.198142415, 5.793450882,
+			7.430103409, 9.810239885, 6.803652968, 8.023340627, 9.421841542,
+			9.321811993, 9.077775102, 10.26566933, 9.906695939, 8.507135016]
+		)
+	),
+	New Column( "CHOSP",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[3.14589068, 3.925845147, 2.755620015, 2.371218316, 3.358778626,
+			1.664355062, 2.728926622, 1.834130781, 3.560371517, 2.01511335,
+			3.6384527, 3.759398496, 3.378995434, 2.80816922, 3.033547466,
+			3.089814087, 4.021189502, 3.43048749, 3.430296378, 2.085620198]
+		)
+	),
+	New Column( "CHONSP",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[5.859221392, 5.670665213, 5.946337926, 7.440719542, 4.961832061,
+			2.773925104, 4.366282596, 3.110047847, 4.024767802, 2.267002519,
+			5.744925316, 8.592910849, 5.068493151, 7.366885485, 7.530335475,
+			5.525006546, 5.658560077, 6.474077895, 6.99780461, 4.006586169]
+		)
+	),
+	New Column( "Not assigned",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[61.58081007, 53.98037077, 59.82596084, 62.79640229, 66.71755725,
+			76.00554785, 56.64038811, 61.80223285, 53.86996904, 63.60201511,
+			54.38529299, 44.93376298, 56.80365297, 53.90226112, 45.89578872,
+			52.57920922, 50.42138213, 46.27289141, 48.90230516, 59.27552141]
+		)
+	),
+	New Column( "Axis 1 (63.7%)",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[-0.216150001, -0.039689999, -0.199239999, 0.822570026, 0.729439974,
+			0.450890005, -0.961030006, -1.02620995, -0.665989995, -1.639700055, -
+			0.408760011, -0.406529993, -0.674459994, -0.162269995, -0.39252001, -
+			0.653069973, -0.705089986, -0.733120024, -0.443899989, -0.839380026]
+		)
+	),
+	New Column( "Axis 2 (20.9%)",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[0.38815999, -0.478119999, -0.273250014, -0.303380013, 0.339379996,
+			1.360460043, 0.054359999, 0.404289991, 0.23398, 0.907159984, -0.08918,
+			-1.095739961, -0.01115, -0.313569993, -0.667519987, -0.04713, -
+			0.148719996, -0.430660009, -0.522369981, 0.57476002]
+		)
+	),
+	New Column( "Axis 3 (12.4%)",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[-0.303339988, -0.749350011, -0.133249998, -0.283450007, -0.307060003,
+			0.18558, 0.00781, -0.151010007, -0.929759979, -0.172790006, -0.255739987,
+			-0.297190011, -0.159830004, -0.02555, -0.062070001, 0.163379997, -
+			0.00325, -0.128470004, -0.218290001, 0.03136]
+		)
+	)
+);
+Fit Model(
+	Y(
+		:Lipid,
+		:Unsaturated hydrocarbons,
+		:Proteins,
+		:Lignin,
+		:carbohydrate,
+		:Amino sugars,
+		:Tannins,
+		:Condensed hydrocarbons
+	),
+	Effects( :tension, :inoculant, :inoculant * :tension ),
+	Personality( Standard Least Squares ),
+	Emphasis( Effect Leverage ),
+	Run(
+		:Lipid << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 ), {:inoculant * :tension << {LSMeans Plot( 1 )}}},
+		:Unsaturated hydrocarbons << {Lack of Fit( 0 ),
+		Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+		Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )},
+		:Proteins << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 )},
+		:Lignin << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 ), {:inoculant * :tension << {LSMeans Plot( 1 )}}},
+		:carbohydrate << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 ), {:inoculant * :tension << {LSMeans Plot( 1 )}}},
+		:Amino sugars << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 ), {:tension << {LSMeans Plot( 1 )}, :inoculant *
+		:tension << {LSMeans Plot( 1 )}}},
+		:Tannins << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 ), {:inoculant * :tension << {LSMeans Plot( 1 )}}},
+		:Condensed hydrocarbons << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 ), {:inoculant * :tension << {LSMeans Plot( 1 )}}}
+	),
+	SendToReport(
+		Dispatch(
+			{"Response carbohydrate", "Whole Model"},
+			"Effect Tests",
+			OutlineBox,
+			{Close( 0 )}
+		),
+		Dispatch(
+			{"Response Amino sugars", "Whole Model"},
+			"Analysis of Variance",
+			OutlineBox,
+			{Close( 0 )}
+		),
+		Dispatch(
+			{"Response Amino sugars", "Whole Model"},
+			"Effect Tests",
+			OutlineBox,
+			{Close( 0 )}
+		),
+		Dispatch(
+			{"Response Tannins", "Whole Model"},
+			"Effect Tests",
+			OutlineBox,
+			{Close( 0 )}
+		)
+	)
+);

@@ -1,0 +1,26 @@
+---
+title: "dwp2013 Incubations"
+author: "APS (peyton.smith@pnnl.gov)"
+date: "Monday, January 18, 2016"
+output: word_document
+---
+
+```{r}
+library(assertthat)
+library(plyr)
+library(reshape2)
+library(ggplot2)
+source("~/GitHub//FTICR_Processing//R//countCompoundTypes.R")
+source("~/GitHub//FTICR_Processing//R//normalizeMassNotation.R")
+source("~/GitHub//FTICR_Processing//R//readFTICR.R")
+
+```
+```{r makeCounts, cache=TRUE}
+compoundsCounts <- countCompoundTypes(fileIn = "~/DWP Experiments//DWP 2013//DWP 2013 Incubations//FT-ICR data//All Data_dwp2013 Incubation_FTICR.csv")
+write.csv(compoundsCounts, file="~/DWP Experiments//DWP 2013//DWP 2013 Incubations//R FTICR//compoundCouts_DWP2013.csv")
+#print(compoundsCounts)
+``` 
+
+```{r}
+ggplot(compoundsCounts) + geom_point(aes(x=OtoC_mean, y=HtoC_mean))
+```

@@ -1,0 +1,13 @@
+﻿Open(
+	"C:\Users\SMIT467\Documents\DWP Experiments\DWP 2013\FTICR Incubations Data DWP2013\normalizeed % dwp2013.jmp"
+);
+Distribution(
+	Continuous Distribution( Column( :Lipid ) ),
+	Continuous Distribution( Column( :Unsaturated hydrocarbons ) ),
+	Continuous Distribution( Column( :Proteins ) ),
+	Continuous Distribution( Column( :Lignin ) ),
+	Continuous Distribution( Column( :carbohydrate ) ),
+	Continuous Distribution( Column( :Amino sugars ) ),
+	Continuous Distribution( Column( :Tannins ) ),
+	Continuous Distribution( Column( :Condensed hydrocarbons ) )
+);

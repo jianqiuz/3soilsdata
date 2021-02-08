@@ -1,0 +1,642 @@
+﻿New Table( "Cellvibrio_FTICR",
+	Add Rows( 20 ),
+	New Script(
+		"Source",
+		Data Table( "FITCR Rel% Transposed _with NMS axis" ) <<
+		Subset(
+			Output Table( "Cellvibrio" ),
+			Selected Rows( 0 ),
+			Rows(
+				[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 31, 32, 33, 34, 35, 36, 37, 38, 39,
+				40]
+			)
+		)
+	),
+	New Column( "Sample ID",
+		Character,
+		Nominal,
+		Set Values(
+			{"11A pre", "11C pre", "13A pre", "13C pre", "26A pre", "26C pre",
+			"34A pre", "34C pre", "52A pre", "52C pre", "11A cellvibrio",
+			"11C cellvibrio", "13A cellvibrio", "13C cellvibrio", "26A cellvibrio",
+			"26C cellvibrio", "34A cellvibrio", "34C cellvibrio", "52A cellvibrio",
+			"52C cellvibrio"}
+		)
+	),
+	New Column( "Core/Pore ID",
+		Character,
+		Nominal,
+		Set Values(
+			{"11A", "11C", "13A", "13C", "26A", "26C", "34A", "34C", "52A", "52C",
+			"11A", "11C", "13A", "13C", "26A", "26C", "34A", "34C", "52A", "52C"}
+		)
+	),
+	New Column( "Pre/post Incubation",
+		Character,
+		Nominal,
+		Set Values(
+			{"pre-incubation", "pre-incubation", "pre-incubation", "pre-incubation",
+			"pre-incubation", "pre-incubation", "pre-incubation", "pre-incubation",
+			"pre-incubation", "pre-incubation", "post-incubation", "post-incubation",
+			"post-incubation", "post-incubation", "post-incubation",
+			"post-incubation", "post-incubation", "post-incubation",
+			"post-incubation", "post-incubation"}
+		)
+	),
+	New Column( "Core",
+		Character,
+		Nominal,
+		Set Values(
+			{"11", "11", "13", "13", "26", "26", "34", "34", "52", "52", "11", "11",
+			"13", "13", "26", "26", "34", "34", "52", "52"}
+		)
+	),
+	New Column( "tension",
+		Character,
+		Nominal,
+		Set Values(
+			{"15 mb", "150 mb", "15 mb", "150 mb", "15 mb", "150 mb", "15 mb",
+			"150 mb", "15 mb", "150 mb", "15 mb", "150 mb", "15 mb", "150 mb",
+			"15 mb", "150 mb", "15 mb", "150 mb", "15 mb", "150 mb"}
+		)
+	),
+	New Column( "inoculant",
+		Character,
+		Nominal,
+		Set Values(
+			{"pre", "pre", "pre", "pre", "pre", "pre", "pre", "pre", "pre", "pre",
+			"cellvibrio", "cellvibrio", "cellvibrio", "cellvibrio", "cellvibrio",
+			"cellvibrio", "cellvibrio", "cellvibrio", "cellvibrio", "cellvibrio"}
+		)
+	),
+	New Column( "Lipid",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[9.791584742, 9.487459106, 8.919506889, 5.560098119, 6.183206107,
+			6.241331484, 10.36992116, 11.00478469, 13.23529412, 11.08312343,
+			4.690966719, 4.476159585, 3.419483101, 3.764705882, 4.341736695,
+			6.385169928, 7.140705032, 6.93441202, 5.50393138, 7.107195301]
+		)
+	),
+	New Column( "Unsaturated hydrocarbons",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[1.297679906, 1.090512541, 2.828136331, 2.04415372, 0.916030534,
+			1.664355062, 3.881140085, 3.26953748, 3.792569659, 2.644836272,
+			0.982567353, 1.00551411, 1.232604374, 1.042016807, 0.980392157,
+			1.373154823, 1.687255197, 1.300202254, 4.145818442, 1.321585903]
+		)
+	),
+	New Column( "Proteins",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[2.831301612, 1.635768811, 1.232777375, 0.817661488, 1.526717557,
+			1.941747573, 4.366282596, 3.03030303, 1.93498452, 5.793450882,
+			0.633914422, 0.713590658, 0.755467197, 0.705882353, 0.87535014,
+			1.819430141, 2.199457668, 1.993643456, 2.537526805, 1.820851689]
+		)
+	),
+	New Column( "Lignin",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[2.35941801, 2.617230098, 3.045685279, 2.207686018, 2.366412214,
+			1.109570042, 3.456640388, 3.189792663, 2.476780186, 1.889168766,
+			1.553090333, 2.173207914, 2.107355865, 2.016806723, 2.135854342,
+			2.677651905, 2.862307924, 2.484830974, 5.182273052, 2.525697504]
+		)
+	),
+	New Column( "carbohydrate",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[0.314589068, 0.327153762, 1.160261059, 0.245298446, 0.152671756,
+			0.138696255, 0.545785324, 0.637958533, 0.154798762, 0.377833753,
+			0.316957211, 0.356795329, 0.516898608, 0.504201681, 0.385154062,
+			0.480604188, 0.421813799, 0.346720601, 0.750536097, 0.499265786]
+		)
+	),
+	New Column( "Amino sugars",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[0.235941801, 0.327153762, 0.652646846, 0.408830744, 0.305343511,
+			0.416088766, 0.485142511, 0.079744817, 0.232198142, 0.755667506,
+			0.031695721, 0.194615634, 0.119284294, 0.268907563, 0.280112045,
+			0.652248541, 0.572461585, 0.404507368, 1.751250893, 0.558002937]
+		)
+	),
+	New Column( "Tannins",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[0.904443571, 2.508178844, 0.94271211, 0.735895339, 0.534351145,
+			0.27739251, 0.667070952, 0.398724083, 1.238390093, 0.125944584,
+			0.919175911, 1.135257866, 0.914512922, 1.042016807, 0.87535014,
+			0.926879506, 1.235311841, 1.126841953, 1.215153681, 0.93979442]
+		)
+	),
+	New Column( "Condensed hydrocarbons",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[4.836806921, 7.19738277, 5.511240029, 6.21422731, 4.961832061,
+			2.635228849, 4.851425106, 3.03030303, 4.334365325, 1.133501259,
+			4.40570523, 4.249108012, 5.407554672, 4.470588235, 4.201680672,
+			4.497082046, 4.760470021, 4.854088414, 4.753395282, 3.494860499]
+		)
+	),
+	New Column( "Other",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[77.42823437, 74.80916031, 75.70703408, 81.76614881, 83.05343511,
+			85.57558946, 71.37659187, 75.35885167, 72.6006192, 76.19647355,
+			86.4659271, 85.69575089, 85.52683897, 86.18487395, 85.92436975,
+			81.18777892, 79.12021693, 80.55475296, 74.16011437, 81.73274596]
+		)
+	),
+	New Column( "CHO",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[3.893039717, 4.252998909, 2.900652647, 1.798855274, 1.755725191,
+			1.941747573, 3.33535476, 3.74800638, 4.334365325, 3.274559194,
+			1.204437401, 1.3298735, 1.868787276, 1.445378151, 1.715686275,
+			1.853759011, 2.440494125, 2.715978041, 3.573981415, 2.34948605]
+		)
+	),
+	New Column( "CHON",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[3.971686984, 4.471101418, 5.656272661, 3.679476697, 4.122137405,
+			3.19001387, 7.519708914, 5.980861244, 7.585139319, 6.423173804,
+			3.454833597, 3.63282517, 3.141153082, 3.025210084, 3.466386555,
+			5.423961552, 5.905393191, 5.200809015, 8.970693352, 5.315712188]
+		)
+	),
+	New Column( "CHOS",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[5.662603225, 14.39476554, 6.163886875, 8.585445626, 5.496183206,
+			5.409153953, 8.853850819, 10.20733652, 9.133126935, 8.942065491,
+			4.183835182, 4.703211158, 4.850894632, 4.806722689, 4.621848739,
+			5.012015105, 5.302802049, 4.709621497, 6.182987848, 4.610866373]
+		)
+	),
+	New Column( "CHOP",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[1.337003539, 2.508178844, 2.393038434, 2.289452167, 2.442748092,
+			1.803051318, 2.971497878, 1.993620415, 2.941176471, 2.392947103,
+			2.472266244, 2.140771975, 3.021868787, 2.487394958, 2.415966387,
+			2.471678682, 2.711660139, 2.542617741, 2.251608292, 2.408223201]
+		)
+	),
+	New Column( "CHONS",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[7.314195832, 6.106870229, 6.381435823, 7.031888798, 6.870229008,
+			5.131761442, 7.580351728, 6.459330144, 7.352941176, 5.289672544,
+			3.391442155, 3.9896205, 3.697813121, 4.302521008, 3.851540616,
+			5.183659458, 5.453449834, 5.489742849, 7.255182273, 4.96328928]
+		)
+	),
+	New Column( "CHONP",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[7.235548565, 4.689203926, 7.976794779, 4.006541292, 4.27480916,
+			2.080443828, 6.003638569, 4.864433812, 7.198142415, 5.793450882,
+			3.042789223, 4.378851768, 3.896620278, 3.462184874, 4.06162465,
+			5.492619293, 6.357336547, 7.281132621, 7.040743388, 5.756240822]
+		)
+	),
+	New Column( "CHOSP",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[3.14589068, 3.925845147, 2.755620015, 2.371218316, 3.358778626,
+			1.664355062, 2.728926622, 1.834130781, 3.560371517, 2.01511335,
+			2.472266244, 2.854362634, 2.624254473, 3.058823529, 2.766106443,
+			3.226913835, 3.585417294, 3.178272176, 2.787705504, 2.672540382]
+		)
+	),
+	New Column( "CHONSP",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[5.859221392, 5.670665213, 5.946337926, 7.440719542, 4.961832061,
+			2.773925104, 4.366282596, 3.110047847, 4.024767802, 2.267002519,
+			2.503961965, 2.951670451, 2.982107356, 3.058823529, 2.731092437,
+			3.57020254, 3.977101537, 3.698353077, 3.824160114, 3.113069016]
+		)
+	),
+	New Column( "Not assigned",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[61.58081007, 53.98037077, 59.82596084, 62.79640229, 66.71755725,
+			76.00554785, 56.64038811, 61.80223285, 53.86996904, 63.60201511,
+			77.27416799, 74.01881284, 73.91650099, 74.35294118, 74.3697479,
+			67.76519053, 64.26634528, 65.18347298, 58.11293781, 68.81057269]
+		)
+	),
+	New Column( "Axis 1 (63.7%)",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[-0.216150001, -0.039689999, -0.199239999, 0.822570026, 0.729439974,
+			0.450890005, -0.961030006, -1.02620995, -0.665989995, -1.639700055,
+			1.480999947, 1.394520044, 1.533669949, 1.539309978, 1.380319953,
+			0.490399987, 0.230279997, 0.408089995, 0.03472, 0.349720001]
+		)
+	),
+	New Column( "Axis 2 (20.9%)",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[0.38815999, -0.478119999, -0.273250014, -0.303380013, 0.339379996,
+			1.360460043, 0.054359999, 0.404289991, 0.23398, 0.907159984, 0.465739995,
+			0.312779993, -0.142409995, 0.249019995, 0.395839989, 0.274410009,
+			0.156420007, 0.242970005, -0.312860012, 0.552649975]
+		)
+	),
+	New Column( "Axis 3 (12.4%)",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[-0.303339988, -0.749350011, -0.133249998, -0.283450007, -0.307060003,
+			0.18558, 0.00781, -0.151010007, -0.929759979, -0.172790006, -0.220760003,
+			-0.063950002, -0.196030006, -0.059349999, -0.029650001, 0.05491,
+			0.096969999, -0.073899999, 1.094550014, 0.066969998]
+		)
+	),
+	New Column( "Prin1",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Property( "Notes", "Principal Components Save Principal Components" ),
+		Formula(
+			0.111099848411526 * :Lipid + 0.519572173950573 *
+			:Unsaturated hydrocarbons + 0.264103240077294 * :Proteins +
+			0.511516198364018 * :Lignin + 0.536772980416342 * :carbohydrate +
+			1.00262149617799 * :Amino sugars + -0.0794662479065894 * :Tannins +
+			0.0339910943588208 * :Condensed hydrocarbons + (-5.23300920238626)
+		),
+		Suppress Eval
+	),
+	New Column( "Prin2",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Property( "Notes", "Principal Components Save Principal Components" ),
+		Formula(
+			-0.10756458910981 * :Lipid + 0.0154450390322973 *
+			:Unsaturated hydrocarbons + -0.410096482807312 * :Proteins +
+			0.215861756370949 * :Lignin + 0.252208856754196 * :carbohydrate +
+			0.0399097742910531 * :Amino sugars + 1.14960108690651 * :Tannins +
+			0.309529943998483 * :Condensed hydrocarbons + (-1.92849121240683)
+		),
+		Suppress Eval
+	),
+	New Column( "Prin3",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Property( "Notes", "Principal Components Save Principal Components" ),
+		Formula(
+			0.288906895101403 * :Lipid + 0.220057824634847 *
+			:Unsaturated hydrocarbons + 0.172742089243988 * :Proteins + -
+			0.122656918648024 * :Lignin + -0.422213614154858 * :carbohydrate + -
+			0.803154865965638 * :Amino sugars + 0.525652308491661 * :Tannins +
+			0.194145635876388 * :Condensed hydrocarbons + (-3.49918841844754)
+		),
+		Suppress Eval
+	),
+	New Column( "tension & inoculant",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values( [., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., .] )
+	),
+	Group Columns( "Principal Components", :Prin1, 3 )
+);
+Fit Model(
+	Y(
+		:Lipid,
+		:Unsaturated hydrocarbons,
+		:Proteins,
+		:Lignin,
+		:carbohydrate,
+		:Amino sugars,
+		:Tannins,
+		:Condensed hydrocarbons
+	),
+	Effects( :inoculant, :tension, :tension * :inoculant ),
+	Personality( Standard Least Squares ),
+	Emphasis( Effect Leverage ),
+	Run(
+		:Lipid << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 ), {:tension * :inoculant << {LSMeans Plot( 1 )}}},
+		:Unsaturated hydrocarbons << {Lack of Fit( 0 ),
+		Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+		Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 ), {:tension *
+		:inoculant << {LSMeans Plot( 1 )}}},
+		:Proteins << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 ), {:tension * :inoculant << {LSMeans Plot( 1 )}}},
+		:Lignin << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 ), {:tension * :inoculant << {LSMeans Plot( 1 )}}},
+		:carbohydrate << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 ), {:tension * :inoculant << {LSMeans Plot( 1 )}}},
+		:Amino sugars << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 ), {:tension * :inoculant << {LSMeans Plot( 1 )}}},
+		:Tannins << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 ), {:tension * :inoculant << {LSMeans Plot( 1 )}}},
+		:Condensed hydrocarbons << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 ), {:tension * :inoculant << {LSMeans Plot( 1 )}}}
+	),
+	SendToReport(
+		Dispatch(
+			{"Response Lipid", "Whole Model"},
+			"Actual by Predicted Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Lipid", "Whole Model"},
+			"Effect Tests",
+			OutlineBox,
+			{Close( 0 )}
+		),
+		Dispatch(
+			{"Response Lipid", "Whole Model"},
+			"Residual by Predicted Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Lipid", "inoculant"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Lipid", "tension"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Lipid", "tension*inoculant"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Unsaturated hydrocarbons", "Whole Model"},
+			"Actual by Predicted Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Unsaturated hydrocarbons", "Whole Model"},
+			"Residual by Predicted Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Unsaturated hydrocarbons", "inoculant"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Unsaturated hydrocarbons", "tension"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Unsaturated hydrocarbons", "tension*inoculant"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Proteins", "Whole Model"},
+			"Actual by Predicted Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Proteins", "Whole Model"},
+			"Residual by Predicted Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Proteins", "inoculant"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Proteins", "tension"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Proteins", "tension*inoculant"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Lignin", "Whole Model"},
+			"Actual by Predicted Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Lignin", "Whole Model"},
+			"Residual by Predicted Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Lignin", "inoculant"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Lignin", "tension"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Lignin", "tension*inoculant"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response carbohydrate", "Whole Model"},
+			"Actual by Predicted Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response carbohydrate", "Whole Model"},
+			"Residual by Predicted Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response carbohydrate", "inoculant"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response carbohydrate", "tension"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response carbohydrate", "tension*inoculant"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Amino sugars", "Whole Model"},
+			"Actual by Predicted Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Amino sugars", "Whole Model"},
+			"Residual by Predicted Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Amino sugars", "inoculant"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Amino sugars", "tension"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Amino sugars", "tension*inoculant"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Tannins", "Whole Model"},
+			"Actual by Predicted Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Tannins", "Whole Model"},
+			"Residual by Predicted Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Tannins", "inoculant"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Tannins", "tension"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Tannins", "tension*inoculant"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Condensed hydrocarbons", "Whole Model"},
+			"Actual by Predicted Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Condensed hydrocarbons", "Whole Model"},
+			"Residual by Predicted Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Condensed hydrocarbons", "inoculant"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Condensed hydrocarbons", "tension"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response Condensed hydrocarbons", "tension*inoculant"},
+			"Leverage Plot",
+			OutlineBox,
+			{Close( 1 )}
+		)
+	)
+);

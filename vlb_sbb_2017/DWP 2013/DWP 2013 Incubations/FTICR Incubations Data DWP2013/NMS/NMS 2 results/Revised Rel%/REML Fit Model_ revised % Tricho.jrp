@@ -1,0 +1,111 @@
+﻿Open(
+	"C:\Users\SMIT467\Documents\DWP Experiments\DWP 2013\DWP 2013 Incubations\FT-ICR data\NMS results\Revised Rel%\Trichoderma Revised % NMS.jmp"
+);
+Fit Group(
+	Fit Model(
+		Y( :Lipid ),
+		Effects( :tension, :inoculant, :inoculant * :tension ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Lipid << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 ), {:inoculant
+			 << {LSMeans Plot( 1 )}}}
+		)
+	),
+	Fit Model(
+		Y( :Unsaturated hydrocarbons ),
+		Effects( :tension, :inoculant, :inoculant * :tension ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Unsaturated hydrocarbons << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Proteins ),
+		Effects( :tension, :inoculant, :inoculant * :tension ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Proteins << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Lignin ),
+		Effects( :tension, :inoculant, :inoculant * :tension ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Lignin << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 ), {:inoculant
+			 << {LSMeans Plot( 1 )}}}
+		)
+	),
+	Fit Model(
+		Y( :carbohydrate ),
+		Effects( :tension, :inoculant, :inoculant * :tension ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:carbohydrate << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Amino sugars ),
+		Effects( :tension, :inoculant, :inoculant * :tension ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Amino sugars << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Tannins ),
+		Effects( :tension, :inoculant, :inoculant * :tension ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Tannins << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Condensed hydrocarbons ),
+		Effects( :tension, :inoculant, :inoculant * :tension ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Condensed hydrocarbons << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	)
+);

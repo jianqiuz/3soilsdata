@@ -1,0 +1,349 @@
+﻿New Table( "0-90 A, D paired samples",
+	Add Rows( 28 ),
+	New Script(
+		"Source",
+		Open(
+			"C:\Users\SMIT467\Documents\DWP2013 Pore Water\SBB short communication\0-90 paired A D samples.xls",
+			Worksheets( "0-90 A, D paired samples" ),
+			Use for all sheets( 1 ),
+			Concatenate Worksheets( 0 ),
+			Create Concatenation Column( 0 ),
+			Worksheet Settings(
+				1,
+				Has Column Headers( 1 ),
+				Number of Rows in Headers( 1 ),
+				Headers Start on Row( 1 ),
+				Data Starts on Row( 2 ),
+				Data Starts on Column( 1 ),
+				Data Ends on Row( 0 ),
+				Data Ends on Column( 0 ),
+				Replicated Spanned Rows( 1 ),
+				Suppress Hidden Rows( 1 ),
+				Suppress Hidden Columns( 1 ),
+				Treat as Hierarchy( 0 )
+			)
+		)
+	),
+	New Column( "Sample",
+		Character( 4 ),
+		Nominal,
+		Set Values(
+			{"12A", "12D", "19A", "19D", "20A", "20D", "27A", "27D2", "28A", "28D",
+			"34A", "34D", "35A", "35D", "36A", "36D", "42A", "42D", "45A", "45D",
+			"47A", "47D", "50A", "50D", "51A", "51D", "8A", "8D"}
+		)
+	),
+	New Column( "site",
+		Character( 3 ),
+		Nominal,
+		Set Values(
+			{"PT", "PT", "PT", "PT", "PT", "PT", "PT", "PT", "PT", "PT", "PT", "PT",
+			"PT", "PT", "PT", "PT", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS",
+			"GS", "GS", "DMT", "DMT"}
+		)
+	),
+	New Column( "depth",
+		Character( 5 ),
+		Nominal,
+		Set Values(
+			{"30-60", "30-60", "0-30", "0-30", "30-60", "30-60", "30-60", "30-60",
+			"60-90", "60-90", "0-30", "0-30", "30-60", "30-60", "60-90", "60-90",
+			"0-30", "0-30", "0-30", "0-30", "60-90", "60-90", "60-90", "60-90",
+			"0-30", "0-30", "30-60", "30-60"}
+		)
+	),
+	New Column( "tension",
+		Character( 3 ),
+		Nominal,
+		Set Values(
+			{"15", "500", "15", "500", "15", "500", "15", "500", "15", "500", "15",
+			"500", "15", "500", "15", "500", "15", "500", "15", "500", "15", "500",
+			"15", "500", "15", "500", "15", "500"}
+		)
+	),
+	New Column( "site_pc",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2,
+			2, 2, 1, 1]
+		)
+	),
+	New Column( "depth_pc",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[2, 2, 1, 1, 2, 2, 2, 2, 3, 3, 1, 1, 2, 2, 3, 3, 1, 1, 1, 1, 3, 3, 3, 3,
+			1, 1, 2, 2]
+		)
+	),
+	New Column( "pressure_pc",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4,
+			1, 4, 1, 4]
+		)
+	),
+	New Column( "core_pc",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[12, 12, 19, 19, 20, 20, 27, 27, 28, 28, 34, 34, 35, 35, 36, 36, 42, 42,
+			45, 45, 47, 47, 50, 50, 51, 51, 8, 8]
+		)
+	),
+	New Column( "Core",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[12, 12, 19, 19, 20, 20, 27, 27, 28, 28, 34, 34, 35, 35, 36, 36, 42, 42,
+			45, 45, 47, 47, 50, 50, 51, 51, 8, 8]
+		)
+	),
+	New Column( "Lipid",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[35.4, 12.19, 18.55, 12.54, 20.85, 17.93, 16.5, 15.11, 22.22, 16.36,
+			13.04, 8.95, 14.92, 16.47, 23.69, 14.84, 30.2, 10, 21.91, 13.18, 25.4,
+			16.06, 22.4, 12.22, 23.79, 23.4, 17.22, 17.25]
+		)
+	),
+	New Column( "Unsaturated hydrocarbons",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[6.03, 5.34, 7.93, 9.38, 11.27, 9.6, 5, 5.65, 13.26, 4.76, 12.94, 5.59,
+			11.19, 11.38, 7.69, 18.7, 6.6, 4.9, 5.79, 6.73, 8.89, 6.12, 12.44, 12.89,
+			12.62, 10.94, 10.91, 8.97]
+		)
+	),
+	New Column( "Proteins",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[2.86, 2.47, 5.97, 3.08, 3.38, 4.29, 17, 13.49, 5.02, 11.37, 3.45, 12.62,
+			7.8, 6.59, 13.85, 3.55, 2.28, 2.16, 13.5, 12.62, 14.6, 5.5, 4.75, 3.33,
+			5.83, 8.51, 5.17, 4.29]
+		)
+	),
+	New Column( "Lignin",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[7.46, 7.4, 12.46, 11.12, 13.8, 13.38, 14.5, 17.76, 10.04, 14.5, 15.63,
+			21.09, 17.63, 15.87, 10.46, 12.85, 7.87, 10.69, 17.67, 14.03, 13.65,
+			15.44, 11.09, 14.89, 12.14, 17.33, 11.1, 12.28]
+		)
+	),
+	New Column( "carbohydrate",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[1.27, 0.82, 1.9, 1.58, 2.25, 1.52, 5.5, 1.04, 2.51, 1.04, 1.92, 3.51,
+			3.73, 2.99, 2.46, 1.46, 1.52, 0.88, 2.62, 2.24, 3.17, 1.99, 1.58, 2.22,
+			3.88, 3.04, 1.41, 1.85]
+		)
+	),
+	New Column( "Amino sugars",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[0.48, 0.41, 1.38, 0.95, 1.41, 1.01, 4.5, 2.42, 1.43, 1.39, 2.3, 3.35,
+			2.71, 1.2, 2.77, 1.46, 1.27, 0.88, 3.47, 2.52, 4.44, 2.29, 1.36, 2.44,
+			2.43, 1.52, 0.94, 1.07]
+		)
+	),
+	New Column( "Tannins",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[2.22, 3.7, 2.47, 4.18, 1.69, 2.78, 0.5, 0.81, 2.15, 1.16, 2.68, 3.51,
+			1.69, 3.59, 1.23, 1.88, 1.27, 4.22, 1.31, 2.66, 0.95, 5.05, 1.58, 1.78,
+			0.49, 0.76, 2.82, 3.41]
+		)
+	),
+	New Column( "Condensed hydrocarbons",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[10.32, 20.27, 11.77, 18.45, 11.55, 16.16, 9, 10.38, 8.6, 14.15, 10.64,
+			11.34, 11.19, 7.19, 7.08, 10.14, 8.88, 20.88, 7.79, 12.34, 4.44, 13,
+			8.37, 16.44, 8.25, 3.34, 13.45, 14.33]
+		)
+	),
+	New Column( "CHO (aldehyde)",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[8.41, 6.71, 12.87, 8.91, 11.55, 10.1, 24, 39.91, 15.41, 30.39, 11.51,
+			21.09, 13.9, 12.57, 23.38, 11.08, 10.66, 6.86, 25.93, 21.74, 20.63,
+			16.67, 11.09, 9.11, 12.62, 18.54, 11.95, 10.92]
+		)
+	),
+	New Column( "CHON",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[11.75, 7.53, 11.77, 9.94, 15.49, 13.64, 10.5, 5.54, 16.49, 7.42, 12.46,
+			10.38, 18.31, 18.26, 11.69, 10.97, 14.97, 8.33, 13.35, 12.34, 12.38,
+			8.72, 18.55, 15.11, 17.96, 13.83, 12.42, 13.16]
+		)
+	),
+	New Column( "CHOS",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[20.79, 24.66, 16.94, 24.84, 20.85, 22.22, 37, 23.18, 17.2, 26.57, 20.33,
+			35.14, 18.31, 20.06, 32, 20.38, 20.56, 24.02, 23.3, 30.01, 33.97, 15.75,
+			22.17, 20.67, 17.48, 11.7, 19.66, 21.25]
+		)
+	),
+	New Column( "CHOP",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[8.89, 4.93, 5.17, 9.15, 9.86, 10.1, 4, 3.34, 8.24, 4.06, 14, 7.19, 9.83,
+			9.88, 4, 16.93, 5.08, 7.25, 5.86, 4.77, 6.03, 5.96, 11.09, 13.78, 9.71,
+			6.38, 7.9, 10.43]
+		)
+	),
+	New Column( "CHONS",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[16.98, 24.93, 26.25, 17.51, 14.93, 13.89, 12.5, 14.07, 18.28, 16.94,
+			10.93, 10.86, 12.88, 11.98, 12.92, 9.93, 17.77, 18.82, 12.89, 14.59,
+			12.06, 25.69, 9.73, 9.78, 15.05, 29.79, 21.64, 15.79]
+		)
+	),
+	New Column( "CHONP",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[10, 9.73, 12.52, 9.23, 10.99, 10.1, 4, 5.65, 7.53, 4.41, 12.75, 5.91,
+			9.49, 11.68, 4.92, 12.02, 10.91, 9.31, 7.33, 5.05, 7.3, 13.15, 12.67,
+			13.33, 11.17, 11.85, 10.44, 9.84]
+		)
+	),
+	New Column( "CHOSP",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[9.52, 7.81, 5.51, 8.04, 7.32, 7.32, 2, 2.42, 8.24, 3.36, 8.92, 4.63,
+			6.78, 7.19, 3.38, 7.21, 9.9, 10.49, 4.55, 4.35, 1.9, 3.98, 6.79, 8.22,
+			9.22, 3.5, 6.59, 7.41]
+		)
+	),
+	New Column( "CHONSP",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[13.65, 13.7, 8.96, 12.38, 9.01, 12.63, 6, 5.88, 8.6, 6.84, 9.11, 4.79,
+			10.51, 8.38, 7.69, 11.49, 10.15, 14.9, 6.79, 7.15, 5.71, 10.09, 7.92, 10,
+			6.8, 4.41, 9.41, 11.21]
+		)
+	),
+	New Column( "Axis 1 (40.2%)",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[-0.069069996, 1.549360037, 0.08918, 1.103440046, -0.034880001,
+			0.475340009, -0.731719971, -0.394309998, -0.280809999, 0.081370004,
+			0.30024001, -0.088310003, -0.188219994, -0.239840001, -0.920509994,
+			0.298729986, -0.323190004, 1.564810038, -0.881839991, 0.02313, -
+			1.257040024, 0.333299994, -0.286029994, 0.692680001, -0.572820008, -
+			1.050850034, 0.363979995, 0.443879992]
+		)
+	),
+	New Column( "Axis 2 (47.7%)",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[-1.416790009, -0.140890002, -0.13775, -0.069279999, -0.30952999, -
+			0.166920006, 0.760630012, 0.811819971, -0.660220027, 0.497420013,
+			0.223020002, 1.405380011, 0.477939993, 0.171430007, -0.172460005, -
+			0.250849992, -1.272119999, 0.179360002, 0.361510009, 0.696940005, -
+			0.0053, 0.369500011, -0.617739975, 0.249180004, -0.49425, -0.051660001,
+			-0.273559988, -0.164820001]
+		)
+	),
+	New Column( "Axis 3 (9.4%)",
+		Numeric,
+		Continuous,
+		Format( "Best", 15 ),
+		Set Values(
+			[-0.770290017, -0.528299987, -0.069770001, 0.093110003, 0.30814001,
+			0.05266, -0.610769987, -0.214410007, 0.34709999, -0.526839972,
+			0.661069989, -0.173230007, 0.424120009, 0.547819972, -0.41734001,
+			0.929220021, -0.521929979, -0.466650009, -0.255910009, -0.223450005, -
+			0.243340001, -0.123949997, 0.301739991, 0.572290003, 0.323599994,
+			0.467189997, 0.133760005, -0.01562]
+		)
+	)
+);
+Fit Model(
+	Y(
+		:Lipid,
+		:Unsaturated hydrocarbons,
+		:Proteins,
+		:Lignin,
+		:carbohydrate,
+		:Amino sugars,
+		:Tannins,
+		:Condensed hydrocarbons
+	),
+	Effects( :depth, :tension, :tension * :depth ),
+	Personality( Standard Least Squares ),
+	Emphasis( Effect Leverage ),
+	Run(
+		:Lipid << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 )},
+		:Unsaturated hydrocarbons << {Lack of Fit( 0 ),
+		Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+		Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )},
+		:Proteins << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 )},
+		:Lignin << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 )},
+		:carbohydrate << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 )},
+		:Amino sugars << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 )},
+		:Tannins << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 )},
+		:Condensed hydrocarbons << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+		Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+		Plot Effect Leverage( 1 )}
+	)
+);

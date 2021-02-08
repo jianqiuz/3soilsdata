@@ -1,0 +1,60 @@
+﻿Open(
+	"C:\Users\SMIT467\Documents\DWP Experiments\DWP 2013\DWP 2013 Incubations\DOC\DOC.jmp"
+);
+Fit Group(
+	Fit Model(
+		Y( :Name( "Cinorg [mg/L]" ) ),
+		Effects( :pore water tension, :inoculant, :inoculant * :pore water tension ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "Cinorg [mg/L]" ) << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "Corg [mg/l]" ) ),
+		Effects( :pore water tension, :inoculant, :inoculant * :pore water tension ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "Corg [mg/l]" ) << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 ), {:inoculant
+			 * :pore water tension << {LSMeans Plot( 1 )}}}
+		)
+	),
+	Fit Model(
+		Y( :Name( "Total C [mg/L]" ) ),
+		Effects( :pore water tension, :inoculant, :inoculant * :pore water tension ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "Total C [mg/L]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	SendToReport(
+		Dispatch(
+			{"Response Corg [mg/l]", "Whole Model", "Actual by Predicted Plot"},
+			"2",
+			ScaleBox,
+			{Min( -25 ), Max( 125 ), Inc( 25 ), Minor Ticks( 0 )}
+		),
+		Dispatch(
+			{"Response Corg [mg/l]", "inoculant*pore water tension", "LS Means Plot"
+			},
+			"2",
+			ScaleBox,
+			{Min( -25 ), Max( 125 ), Inc( 25 ), Minor Ticks( 0 )}
+		)
+	)
+);

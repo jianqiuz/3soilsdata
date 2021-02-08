@@ -1,0 +1,113 @@
+
+
+****************************** Outlier Analysis ******************************
+PC-ORD, 6.0                 
+18 May 2015,  9:01:48
+
+OUTLIERS NMS revised Rel % DWP2013                                              
+
+
+    Frequency distribution of average distances    N =    50 samples 
+
+ Distance*   |  Frequency   (each "X" represents one entity)
+-------------|----------------------------------------------------------------------------
+     0.29468 |X 52C pre                                                                  
+     0.28207 |X 52C cont                                                                 
+     0.26946 |X 11A Stre                                                                 
+     0.25686 |                                                                           
+     0.24425 |                                                                           
+     0.23164 |                                                                           
+     0.21903 |X                                                                          
+     0.20643 |X                                                                          
+     0.19382 |XXXX                                                                       
+     0.18121 |XXXXX                                                                      
+     0.16861 |X                                                                          
+     0.15600 |XXXXXXXXXX                                                                 
+     0.14339 |XXXXXXXX                                                                   
+     0.13079 |XXXXXX                                                                     
+     0.11818 |XXXXXXXXXXX                                                                
+------------------------------------------------------------------------------------------
+* Distances at left are lower end of that bin`s range.
+
+
+
+OUTLIERS NMS revised Rel % DWP2013                                              
+------------------------------------------
+        ENTITY       AVERAGE     STANDARD
+ RANK    NAME        DISTANCE   DEVIATIONS
+------------------------------------------
+    1  52C pre        0.30728     3.35964
+    2  52C cont       0.29252     3.01255
+    3  11A Stre       0.27843     2.68127
+------------------------------------------
+
+
+
+OUTLIERS NMS revised Rel % DWP2013                                              
+------------------------------------------
+        ENTITY       AVERAGE     STANDARD
+ RANK    NAME        DISTANCE   DEVIATIONS
+------------------------------------------
+    1  52C pre        0.30728     3.35964
+    2  52C cont       0.29252     3.01255
+    3  11A Stre       0.27843     2.68127
+    4  52A cell       0.23126     1.57225
+    5  52A pre        0.20792     1.02335
+    6  13A cell       0.20242     0.89398
+    7  26C Stre       0.20178     0.87909
+    8  34C pre        0.19844     0.80056
+    9  52C Tric       0.19506     0.72098
+   10  26A cont       0.18844     0.56533
+   11  26C pre        0.18442     0.47083
+   12  52C Stre       0.18411     0.46351
+   13  13A cont       0.18295     0.43634
+   14  34C Stre       0.18190     0.41166
+   15  11C pre        0.17369     0.21853
+   16  13C cell       0.16768     0.07724
+   17  13C cont       0.16722     0.06647
+   18  11C Tric       0.16656     0.05093
+   19  52A Stre       0.16528     0.02080
+   20  11A pre        0.16519     0.01860
+   21  11A cont       0.16471     0.00727
+   22  13C pre        0.16360    -0.01867
+   23  13A Stre       0.16344    -0.02257
+   24  34A pre        0.16281    -0.03729
+   25  11A cell       0.15911    -0.12424
+   26  11C cell       0.15537    -0.21222
+   27  11C Stre       0.15425    -0.23853
+   28  13C Stre       0.15294    -0.26943
+   29  26A pre        0.14635    -0.42422
+   30  26A cell       0.14555    -0.44309
+   31  52A cont       0.14533    -0.44826
+   32  11C cont       0.14505    -0.45498
+   33  13A Tric       0.14429    -0.47270
+   34  11A Tric       0.13701    -0.64383
+   35  34A Stre       0.13681    -0.64855
+   36  26A Stre       0.13551    -0.67928
+   37  52C cell       0.13276    -0.74385
+   38  26C Tric       0.13244    -0.75132
+   39  26A Tric       0.13175    -0.76756
+   40  13A pre        0.12960    -0.81826
+   41  34C cell       0.12828    -0.84927
+   42  52A Tric       0.12794    -0.85711
+   43  34A Tric       0.12603    -0.90197
+   44  26C cell       0.12565    -0.91109
+   45  34A cell       0.12450    -0.93799
+   46  34A cont       0.12434    -0.94189
+   47  26C cont       0.12323    -0.96803
+   48  13C Tric       0.12147    -1.00939
+   49  34C Tric       0.11894    -1.06890
+   50  34C cont       0.11818    -1.08664
+------------------------------------------
+
+
+Statistics for average distances for each of N =   50 samples 
+Distance measure: Sorensen (Bray-Curtis)        
+ 0.16440     = Grand mean
+ 0.42530E-01 = Standard deviation
+     2.00000 = Cutoff number of standard deviations used to flag outliers
+
+
+
+****************************** Analysis completed ******************************
+18 May 2015,  9:01:48

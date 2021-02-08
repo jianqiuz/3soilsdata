@@ -1,0 +1,1129 @@
+﻿Open(
+	"C:\Users\SMIT467\Documents\DWP Experiments\DWP 2013\FTICR Incubations Data DWP2013\NMS wtih MicroTrans matrix\NMS results with Microtrans.jmp"
+);
+Fit Group(
+	Fit Model(
+		Y( :CH4_O ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:CH4_O << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 ), {:Treatment
+			 << {LSMeans Plot( 1 )}}}
+		)
+	),
+	Fit Model(
+		Y( :NH_CH2 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:NH_CH2 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 ), {:Poresize
+			 << {LSMeans Plot( 1 )}, :Treatment * :Poresize << {LSMeans Plot( 1 )}}}
+		)
+	),
+	Fit Model(
+		Y( :CH2 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:CH2 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :O ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:O << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "CH3COO-" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "CH3COO-" ) << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "PO43-" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "PO43-" ) << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "SO42-" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "SO42-" ) << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "NO3-" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "NO3-" ) << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "NH4+" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "NH4+" ) << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :H2S ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:H2S << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "S2O32-" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "S2O32-" ) << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :glucose_C6H12O6 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:glucose_C6H12O6 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :glucose_C6H12O6 2 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:glucose_C6H12O6 2 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :pentose_C5H8O4 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:pentose_C5H8O4 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :glcnac_C8H13N1O5 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:glcnac_C8H13N1O5 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :neugc_C11H17N1O9 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:neugc_C11H17N1O9 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Alanine_C3H5NO ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Alanine_C3H5NO << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 ), {:Poresize
+			 << {LSMeans Plot( 1 )}}}
+		)
+	),
+	Fit Model(
+		Y( :Arginine_C6H12N4O ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Arginine_C6H12N4O << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Asparagine_C4H6N2O2 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Asparagine_C4H6N2O2 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Aspartic_Acid_C4H5NO3 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Aspartic_Acid_C4H5NO3 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Cysteine_C3H5NOS ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Cysteine_C3H5NOS << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Cystine_C6H10N2O3S2 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Cystine_C6H10N2O3S2 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Glutamic_Acid_C5H7NO3 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Glutamic_Acid_C5H7NO3 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Glutamine_C5H8N2O2 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Glutamine_C5H8N2O2 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Glycine_C2H3NO ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Glycine_C2H3NO << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Histidine_C6H7N3O ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Histidine_C6H7N3O << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Isoleucine_C6H11NO ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Isoleucine_C6H11NO << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 ), {:Poresize
+			 << {LSMeans Plot( 1 )}}}
+		)
+	),
+	Fit Model(
+		Y( :Leucine_C6H11NO ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Leucine_C6H11NO << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Lysine_C6H12N2O ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Lysine_C6H12N2O << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Methionine_C5H9NOS ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Methionine_C5H9NOS << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Phenylalanine_C9H9NO ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Phenylalanine_C9H9NO << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Proline_C5H7NO ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Proline_C5H7NO << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 ), {:Poresize
+			 << {LSMeans Plot( 1 )}, :Treatment * :Poresize << {LSMeans Plot( 1 )}}}
+		)
+	),
+	Fit Model(
+		Y( :Serine_C3H5NO2 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Serine_C3H5NO2 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 ), {:Poresize
+			 << {LSMeans Plot( 1 )}}}
+		)
+	),
+	Fit Model(
+		Y( :Threonine_C4H7NO2 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Threonine_C4H7NO2 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Tryptophan_C11H10N2O ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Tryptophan_C11H10N2O << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Tyrosine_C9H9NO2 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Tyrosine_C9H9NO2 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Valine_C5H9NO ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Valine_C5H9NO << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "acetotacetate_(-H2O)_C4H4O2" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "acetotacetate_(-H2O)_C4H4O2" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "acetone_(-H)_C3H5O" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "acetone_(-H)_C3H5O" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "adenylate_(-H2O)_C10H12N5O6P" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "adenylate_(-H2O)_C10H12N5O6P" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "biotinyl_(-H)_C10H15N2O3S" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "biotinyl_(-H)_C10H15N2O3S" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "biotinyl_(-H2O)_C10H14N2O2S" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "biotinyl_(-H2O)_C10H14N2O2S" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "carbamoyl_P_transfer_(-H2PO4)_CH2ON" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "carbamoyl_P_transfer_(-H2PO4)_CH2ON" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "co-enzyme_A_(-H)_C21H34N7O16P3S" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "co-enzyme_A_(-H)_C21H34N7O16P3S" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "co-enzyme_A_(-H2O)_C21H33N7O15P3S" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "co-enzyme_A_(-H2O)_C21H33N7O15P3S" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "glutathione_(-H2O)_C10H15N3O5S" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "glutathione_(-H2O)_C10H15N3O5S" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "isoprene_addition_(-H)_C5H7" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "isoprene_addition_(-H)_C5H7" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "malonyl_group_(-H2O)_C3H2O3" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "malonyl_group_(-H2O)_C3H2O3" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "palmitoylation_(-H2O)_C16H30O" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "palmitoylation_(-H2O)_C16H30O" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "pyridoxal_phosphate_(-H2O)_C8H8NO5P" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "pyridoxal_phosphate_(-H2O)_C8H8NO5P" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "urea_addition_(-H)_CH3N2O" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "urea_addition_(-H)_CH3N2O" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "adenine_(-H)_C5H4N5" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "adenine_(-H)_C5H4N5" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "adenosine_(-H2O)_C10H11N5O3" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "adenosine_(-H2O)_C10H11N5O3" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "Adenosine_5_diphosphate_(-H2O)_C10H13N5O9P2" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "Adenosine_5_diphosphate_(-H2O)_C10H13N5O9P2" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "Adenosine_5_monophosphate_(-H2O)_C10H12N5O6P" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "Adenosine_5_monophosphate_(-H2O)_C10H12N5O6P" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "cytidine_5_diphosphate_(-H2O)_C9H13N3O10P2" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "cytidine_5_diphosphate_(-H2O)_C9H13N3O10P2" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "cytidine_5_monophsophate_(-H2O)_C9H12N3O7P" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "cytidine_5_monophsophate_(-H2O)_C9H12N3O7P" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "cytosine_(-H)_C4H4N3O" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "cytosine_(-H)_C4H4N3O" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "Guanosine5_diphosphate_(-H2O)_C10H13N5O10P2" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "Guanosine5_diphosphate_(-H2O)_C10H13N5O10P2" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "Guanosine_5_monophosphate_(-H2O)_C10H12N5O7P" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "Guanosine_5_monophosphate_(-H2O)_C10H12N5O7P" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "guanine_(-H)_C5H4N5O" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "guanine_(-H)_C5H4N5O" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "guanosine_(-H2O)_C10H11N5O4" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "guanosine_(-H2O)_C10H11N5O4" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "deoxythymidine_5_diphosphate_(-H2O)_C10H14N2O10P2" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "deoxythymidine_5_diphosphate_(-H2O)_C10H14N2O10P2" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "thymidine_(-H2O)_C10H12N2O4" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "thymidine_(-H2O)_C10H12N2O4" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "thymine_(-H)_C5H5N2O2" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "thymine_(-H)_C5H5N2O2" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "thymidine_5_monophosphate_(-H2O)_C10H13N2O7P" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "thymidine_5_monophosphate_(-H2O)_C10H13N2O7P" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "uridine_5_diphosphate_(-H2O)_C9H12N2O11P2" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "uridine_5_diphosphate_(-H2O)_C9H12N2O11P2" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "uridine_5_monophosphate_(-H2O)_C9H11N2O8P" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "uridine_5_monophosphate_(-H2O)_C9H11N2O8P" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "uracil_(-H)_C4H3N2O2" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "uracil_(-H)_C4H3N2O2" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "uridine_(-H2O)_C9H10N2O5" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "uridine_(-H2O)_C9H10N2O5" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "acetylation_(-H)_C2H3O2" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "acetylation_(-H)_C2H3O2" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "acetylation_(-H2O)_C2H2O" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "acetylation_(-H2O)_C2H2O" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :C2H2_C2H2 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:C2H2_C2H2 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Carboxylation_CO2 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Carboxylation_CO2 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :CHO2_CHO2 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:CHO2_CHO2 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "condensation/dehydration_H2O" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "condensation/dehydration_H2O" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :diphosphate_H3O6P2 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:diphosphate_H3O6P2 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "ethyl addition_(-H2O)_C2H4" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "ethyl addition_(-H2O)_C2H4" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "Formic Acid_(-H2O)_CO" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "Formic Acid_(-H2O)_CO" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "glyoxylate_(-H2O)_C2O2" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "glyoxylate_(-H2O)_C2O2" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :hydrogenation_dehydrogenation_H2 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:hydrogenation_dehydrogenation_H2 << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "hydroxylation_(-H)_O" ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "hydroxylation_(-H)_O" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Inorganic_Phosphate_P ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Inorganic_Phosphate_P << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :TRANSAMINATION ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:TRANSAMINATION << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Catechol_O2 ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( Standard Least Squares ),
+		Method( REML ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Catechol_O2 << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	)
+);

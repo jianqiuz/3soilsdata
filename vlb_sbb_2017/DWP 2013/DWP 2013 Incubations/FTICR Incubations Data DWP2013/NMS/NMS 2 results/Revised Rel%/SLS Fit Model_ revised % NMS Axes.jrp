@@ -1,0 +1,17 @@
+﻿Open(
+	"C:\Users\SMIT467\Documents\DWP Experiments\DWP 2013\DWP 2013 Incubations\FT-ICR data\NMS results\Revised Rel%\Revised % NMS.jmp"
+);
+Fit Model(
+	Y( :Name( "NMS Axis 1 (67.1%)" ), :Name( "NMS Axis 2 (29.5%)" ) ),
+	Effects( :tension, :inoculant, :inoculant * :tension ),
+	Personality( Standard Least Squares ),
+	Emphasis( Effect Leverage ),
+	Run(
+		:Name( "NMS Axis 1 (67.1%)" ) << {Lack of Fit( 0 ),
+		Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+		Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )},
+		:Name( "NMS Axis 2 (29.5%)" ) << {Lack of Fit( 0 ),
+		Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+		Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+	)
+);

@@ -1,0 +1,1705 @@
+﻿Open(
+	"C:\Users\SMIT467\Documents\DWP Experiments\DWP 2013\DWP 2013 Incubations\FT-ICR data\jan 2016 reran through script\Microtrans_all.jmp"
+);
+Fit Group(
+	Fit Model(
+		Y( Transform Column( "Square Root[CH4_O]", Formula( Sqrt( :CH4_O ) ) ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[CH4_O]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y( Transform Column( "Square Root[NH_CH2]", Formula( Sqrt( :NH_CH2 ) ) ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[NH_CH2]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y( Transform Column( "Square Root[CH2]", Formula( Sqrt( :CH2 ) ) ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[CH2]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y( Transform Column( "Square Root[O]", Formula( Sqrt( :O ) ) ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[O]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[CH3COO-]",
+				Formula( Sqrt( :Name( "CH3COO-" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[CH3COO-]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[PO43-]",
+				Formula( Sqrt( :Name( "PO43-" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[PO43-]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[SO42-]",
+				Formula( Sqrt( :Name( "SO42-" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[SO42-]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[NO3-]",
+				Formula( Sqrt( :Name( "NO3-" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[NO3-]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[NH4+]",
+				Formula( Sqrt( :Name( "NH4+" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[NH4+]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y( Transform Column( "Square Root[H2S]", Formula( Sqrt( :H2S ) ) ) ),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[H2S]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[S2O32-]",
+				Formula( Sqrt( :Name( "S2O32-" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[S2O32-]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[glucose_C6H12O6]",
+				Formula( Sqrt( :glucose_C6H12O6 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[glucose_C6H12O6]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[glucose_C6H12O6 2]",
+				Formula( Sqrt( :glucose_C6H12O6 2 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[glucose_C6H12O6 2]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[pentose_C5H8O4]",
+				Formula( Sqrt( :pentose_C5H8O4 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[pentose_C5H8O4]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[glcnac_C8H13N1O5]",
+				Formula( Sqrt( :glcnac_C8H13N1O5 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[glcnac_C8H13N1O5]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[neugc_C11H17N1O9]",
+				Formula( Sqrt( :neugc_C11H17N1O9 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[neugc_C11H17N1O9]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Alanine_C3H5NO]",
+				Formula( Sqrt( :Alanine_C3H5NO ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Alanine_C3H5NO]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Arginine_C6H12N4O]",
+				Formula( Sqrt( :Arginine_C6H12N4O ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Arginine_C6H12N4O]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Asparagine_C4H6N2O2]",
+				Formula( Sqrt( :Asparagine_C4H6N2O2 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Asparagine_C4H6N2O2]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Aspartic_Acid_C4H5NO3]",
+				Formula( Sqrt( :Aspartic_Acid_C4H5NO3 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Aspartic_Acid_C4H5NO3]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Cysteine_C3H5NOS]",
+				Formula( Sqrt( :Cysteine_C3H5NOS ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Cysteine_C3H5NOS]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Cystine_C6H10N2O3S2]",
+				Formula( Sqrt( :Cystine_C6H10N2O3S2 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Cystine_C6H10N2O3S2]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Glutamic_Acid_C5H7NO3]",
+				Formula( Sqrt( :Glutamic_Acid_C5H7NO3 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Glutamic_Acid_C5H7NO3]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Glutamine_C5H8N2O2]",
+				Formula( Sqrt( :Glutamine_C5H8N2O2 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Glutamine_C5H8N2O2]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Glycine_C2H3NO]",
+				Formula( Sqrt( :Glycine_C2H3NO ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Glycine_C2H3NO]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Histidine_C6H7N3O]",
+				Formula( Sqrt( :Histidine_C6H7N3O ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Histidine_C6H7N3O]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Isoleucine_C6H11NO]",
+				Formula( Sqrt( :Isoleucine_C6H11NO ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Isoleucine_C6H11NO]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Leucine_C6H11NO]",
+				Formula( Sqrt( :Leucine_C6H11NO ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Leucine_C6H11NO]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Lysine_C6H12N2O]",
+				Formula( Sqrt( :Lysine_C6H12N2O ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Lysine_C6H12N2O]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Methionine_C5H9NOS]",
+				Formula( Sqrt( :Methionine_C5H9NOS ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Methionine_C5H9NOS]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Phenylalanine_C9H9NO]",
+				Formula( Sqrt( :Phenylalanine_C9H9NO ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Phenylalanine_C9H9NO]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Proline_C5H7NO]",
+				Formula( Sqrt( :Proline_C5H7NO ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Proline_C5H7NO]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Serine_C3H5NO2]",
+				Formula( Sqrt( :Serine_C3H5NO2 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Serine_C3H5NO2]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Threonine_C4H7NO2]",
+				Formula( Sqrt( :Threonine_C4H7NO2 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Threonine_C4H7NO2]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Tryptophan_C11H10N2O]",
+				Formula( Sqrt( :Tryptophan_C11H10N2O ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Tryptophan_C11H10N2O]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Tyrosine_C9H9NO2]",
+				Formula( Sqrt( :Tyrosine_C9H9NO2 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Tyrosine_C9H9NO2]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Valine_C5H9NO]",
+				Formula( Sqrt( :Valine_C5H9NO ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Valine_C5H9NO]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[acetotacetate_(-H2O)_C4H4O2]",
+				Formula( Sqrt( :Name( "acetotacetate_(-H2O)_C4H4O2" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[acetotacetate_(-H2O)_C4H4O2]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[acetone_(-H)_C3H5O]",
+				Formula( Sqrt( :Name( "acetone_(-H)_C3H5O" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[acetone_(-H)_C3H5O]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[adenylate_(-H2O)_C10H12N5O6P]",
+				Formula( Sqrt( :Name( "adenylate_(-H2O)_C10H12N5O6P" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[adenylate_(-H2O)_C10H12N5O6P]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[biotinyl_(-H)_C10H15N2O3S]",
+				Formula( Sqrt( :Name( "biotinyl_(-H)_C10H15N2O3S" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[biotinyl_(-H)_C10H15N2O3S]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[biotinyl_(-H2O)_C10H14N2O2S]",
+				Formula( Sqrt( :Name( "biotinyl_(-H2O)_C10H14N2O2S" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[biotinyl_(-H2O)_C10H14N2O2S]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[carbamoyl_P_transfer_(-H2PO4)_CH2ON]",
+				Formula( Sqrt( :Name( "carbamoyl_P_transfer_(-H2PO4)_CH2ON" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[carbamoyl_P_transfer_(-H2PO4)_CH2ON]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[co-enzyme_A_(-H)_C21H34N7O16P3S]",
+				Formula( Sqrt( :Name( "co-enzyme_A_(-H)_C21H34N7O16P3S" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[co-enzyme_A_(-H)_C21H34N7O16P3S]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[co-enzyme_A_(-H2O)_C21H33N7O15P3S]",
+				Formula( Sqrt( :Name( "co-enzyme_A_(-H2O)_C21H33N7O15P3S" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[co-enzyme_A_(-H2O)_C21H33N7O15P3S]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[glutathione_(-H2O)_C10H15N3O5S]",
+				Formula( Sqrt( :Name( "glutathione_(-H2O)_C10H15N3O5S" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[glutathione_(-H2O)_C10H15N3O5S]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[isoprene_addition_(-H)_C5H7]",
+				Formula( Sqrt( :Name( "isoprene_addition_(-H)_C5H7" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[isoprene_addition_(-H)_C5H7]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[malonyl_group_(-H2O)_C3H2O3]",
+				Formula( Sqrt( :Name( "malonyl_group_(-H2O)_C3H2O3" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[malonyl_group_(-H2O)_C3H2O3]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[palmitoylation_(-H2O)_C16H30O]",
+				Formula( Sqrt( :Name( "palmitoylation_(-H2O)_C16H30O" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[palmitoylation_(-H2O)_C16H30O]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[pyridoxal_phosphate_(-H2O)_C8H8NO5P]",
+				Formula( Sqrt( :Name( "pyridoxal_phosphate_(-H2O)_C8H8NO5P" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[pyridoxal_phosphate_(-H2O)_C8H8NO5P]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[urea_addition_(-H)_CH3N2O]",
+				Formula( Sqrt( :Name( "urea_addition_(-H)_CH3N2O" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[urea_addition_(-H)_CH3N2O]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[adenine_(-H)_C5H4N5]",
+				Formula( Sqrt( :Name( "adenine_(-H)_C5H4N5" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[adenine_(-H)_C5H4N5]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[adenosine_(-H2O)_C10H11N5O3]",
+				Formula( Sqrt( :Name( "adenosine_(-H2O)_C10H11N5O3" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[adenosine_(-H2O)_C10H11N5O3]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Adenosine_5_diphosphate_(-H2O)_C10H13N5O9P2]",
+				Formula(
+					Sqrt( :Name( "Adenosine_5_diphosphate_(-H2O)_C10H13N5O9P2" ) )
+				)
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Adenosine_5_diphosphate_(-H2O)_C10H13N5O9P2]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Adenosine_5_monophosphate_(-H2O)_C10H12N5O6P]",
+				Formula(
+					Sqrt( :Name( "Adenosine_5_monophosphate_(-H2O)_C10H12N5O6P" ) )
+				)
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Adenosine_5_monophosphate_(-H2O)_C10H12N5O6P]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[cytidine_5_diphosphate_(-H2O)_C9H13N3O10P2]",
+				Formula(
+					Sqrt( :Name( "cytidine_5_diphosphate_(-H2O)_C9H13N3O10P2" ) )
+				)
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[cytidine_5_diphosphate_(-H2O)_C9H13N3O10P2]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[cytidine_5_monophsophate_(-H2O)_C9H12N3O7P]",
+				Formula(
+					Sqrt( :Name( "cytidine_5_monophsophate_(-H2O)_C9H12N3O7P" ) )
+				)
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[cytidine_5_monophsophate_(-H2O)_C9H12N3O7P]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[cytosine_(-H)_C4H4N3O]",
+				Formula( Sqrt( :Name( "cytosine_(-H)_C4H4N3O" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[cytosine_(-H)_C4H4N3O]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Guanosine5_diphosphate_(-H2O)_C10H13N5O10P2]",
+				Formula(
+					Sqrt( :Name( "Guanosine5_diphosphate_(-H2O)_C10H13N5O10P2" ) )
+				)
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Guanosine5_diphosphate_(-H2O)_C10H13N5O10P2]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Guanosine_5_monophosphate_(-H2O)_C10H12N5O7P]",
+				Formula(
+					Sqrt( :Name( "Guanosine_5_monophosphate_(-H2O)_C10H12N5O7P" ) )
+				)
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Guanosine_5_monophosphate_(-H2O)_C10H12N5O7P]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[guanine_(-H)_C5H4N5O]",
+				Formula( Sqrt( :Name( "guanine_(-H)_C5H4N5O" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[guanine_(-H)_C5H4N5O]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[guanosine_(-H2O)_C10H11N5O4]",
+				Formula( Sqrt( :Name( "guanosine_(-H2O)_C10H11N5O4" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[guanosine_(-H2O)_C10H11N5O4]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[deoxythymidine_5_diphosphate_(-H2O)_C10H14N2O10P2]",
+				Formula(
+					Sqrt(
+						:Name( "deoxythymidine_5_diphosphate_(-H2O)_C10H14N2O10P2" )
+					)
+				)
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name(
+				"Square Root[deoxythymidine_5_diphosphate_(-H2O)_C10H14N2O10P2]"
+			) << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[thymidine_(-H2O)_C10H12N2O4]",
+				Formula( Sqrt( :Name( "thymidine_(-H2O)_C10H12N2O4" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[thymidine_(-H2O)_C10H12N2O4]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[thymine_(-H)_C5H5N2O2]",
+				Formula( Sqrt( :Name( "thymine_(-H)_C5H5N2O2" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[thymine_(-H)_C5H5N2O2]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[thymidine_5_monophosphate_(-H2O)_C10H13N2O7P]",
+				Formula(
+					Sqrt( :Name( "thymidine_5_monophosphate_(-H2O)_C10H13N2O7P" ) )
+				)
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[thymidine_5_monophosphate_(-H2O)_C10H13N2O7P]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[uridine_5_diphosphate_(-H2O)_C9H12N2O11P2]",
+				Formula(
+					Sqrt( :Name( "uridine_5_diphosphate_(-H2O)_C9H12N2O11P2" ) )
+				)
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[uridine_5_diphosphate_(-H2O)_C9H12N2O11P2]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[uridine_5_monophosphate_(-H2O)_C9H11N2O8P]",
+				Formula(
+					Sqrt( :Name( "uridine_5_monophosphate_(-H2O)_C9H11N2O8P" ) )
+				)
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[uridine_5_monophosphate_(-H2O)_C9H11N2O8P]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[uracil_(-H)_C4H3N2O2]",
+				Formula( Sqrt( :Name( "uracil_(-H)_C4H3N2O2" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[uracil_(-H)_C4H3N2O2]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[uridine_(-H2O)_C9H10N2O5]",
+				Formula( Sqrt( :Name( "uridine_(-H2O)_C9H10N2O5" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[uridine_(-H2O)_C9H10N2O5]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[acetylation_(-H)_C2H3O2]",
+				Formula( Sqrt( :Name( "acetylation_(-H)_C2H3O2" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[acetylation_(-H)_C2H3O2]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[acetylation_(-H2O)_C2H2O]",
+				Formula( Sqrt( :Name( "acetylation_(-H2O)_C2H2O" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[acetylation_(-H2O)_C2H2O]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[C2H2_C2H2]",
+				Formula( Sqrt( :C2H2_C2H2 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[C2H2_C2H2]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Carboxylation_CO2]",
+				Formula( Sqrt( :Carboxylation_CO2 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Carboxylation_CO2]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[CHO2_CHO2]",
+				Formula( Sqrt( :CHO2_CHO2 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[CHO2_CHO2]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[condensation/dehydration_H2O]",
+				Formula( Sqrt( :Name( "condensation/dehydration_H2O" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[condensation/dehydration_H2O]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[diphosphate_H3O6P2]",
+				Formula( Sqrt( :diphosphate_H3O6P2 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[diphosphate_H3O6P2]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[ethyl addition_(-H2O)_C2H4]",
+				Formula( Sqrt( :Name( "ethyl addition_(-H2O)_C2H4" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[ethyl addition_(-H2O)_C2H4]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Formic Acid_(-H2O)_CO]",
+				Formula( Sqrt( :Name( "Formic Acid_(-H2O)_CO" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Formic Acid_(-H2O)_CO]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[glyoxylate_(-H2O)_C2O2]",
+				Formula( Sqrt( :Name( "glyoxylate_(-H2O)_C2O2" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[glyoxylate_(-H2O)_C2O2]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[hydrogenation_dehydrogenation_H2]",
+				Formula( Sqrt( :hydrogenation_dehydrogenation_H2 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[hydrogenation_dehydrogenation_H2]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[hydroxylation_(-H)_O]",
+				Formula( Sqrt( :Name( "hydroxylation_(-H)_O" ) ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[hydroxylation_(-H)_O]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Inorganic_Phosphate_P]",
+				Formula( Sqrt( :Inorganic_Phosphate_P ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Inorganic_Phosphate_P]" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[TRANSAMINATION]",
+				Formula( Sqrt( :TRANSAMINATION ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[TRANSAMINATION]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	Fit Model(
+		Y(
+			Transform Column(
+				"Square Root[Catechol_O2]",
+				Formula( Sqrt( :Catechol_O2 ) )
+			)
+		),
+		Effects( :Poresize, :Treatment, :Treatment * :Poresize ),
+		Random Effects( :Core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Minimal Report" ),
+		Run(
+			:Name( "Square Root[Catechol_O2]" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 0 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 0 ), Plot Effect Leverage( 0 )}
+		)
+	),
+	SendToReport(
+		Dispatch( {}, "Response Square Root[CH4_O]", OutlineBox, {Close( 1 )} ),
+		Dispatch( {}, "Response Square Root[CH2]", OutlineBox, {Close( 1 )} ),
+		Dispatch( {}, "Response Square Root[O]", OutlineBox, {Close( 1 )} ),
+		Dispatch( {}, "Response Square Root[CH3COO-]", OutlineBox, {Close( 1 )} ),
+		Dispatch( {}, "Response Square Root[PO43-]", OutlineBox, {Close( 1 )} ),
+		Dispatch( {}, "Response Square Root[SO42-]", OutlineBox, {Close( 1 )} ),
+		Dispatch( {}, "Response Square Root[NO3-]", OutlineBox, {Close( 1 )} ),
+		Dispatch( {}, "Response Square Root[NH4+]", OutlineBox, {Close( 1 )} ),
+		Dispatch( {}, "Response Square Root[H2S]", OutlineBox, {Close( 1 )} ),
+		Dispatch(
+			{},
+			"Response Square Root[glucose_C6H12O6]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[glucose_C6H12O6 2]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[pentose_C5H8O4]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[glcnac_C8H13N1O5]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[neugc_C11H17N1O9]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[Arginine_C6H12N4O]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[Aspartic_Acid_C4H5NO3]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[Cysteine_C3H5NOS]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[Cystine_C6H10N2O3S2]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[Glutamic_Acid_C5H7NO3]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[Glutamine_C5H8N2O2]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[Glycine_C2H3NO]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[Histidine_C6H7N3O]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[Phenylalanine_C9H9NO]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[Proline_C5H7NO]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[Threonine_C4H7NO2]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[Tryptophan_C11H10N2O]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[Tyrosine_C9H9NO2]",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{},
+			"Response Square Root[acetone_(-H)_C3H5O]",
+			OutlineBox,
+			{Close( 1 )}
+		)
+	)
+);

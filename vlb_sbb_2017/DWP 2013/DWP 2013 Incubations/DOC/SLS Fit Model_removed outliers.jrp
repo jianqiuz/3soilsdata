@@ -1,0 +1,38 @@
+﻿Open(
+	"C:\Users\SMIT467\Documents\DWP Experiments\DWP 2013\DWP 2013 Incubations\DOC\DOC removed outliers.jmp"
+);
+Fit Group(
+	Fit Model(
+		Y( :Name( "Cinorg [mg/L]" ) ),
+		Effects( :Core, :pore water tension, :inoculant ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "Cinorg [mg/L]" ) << {Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "Corg [mg/l]" ) ),
+		Effects( :Core, :pore water tension, :inoculant ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "Corg [mg/l]" ) << {Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "Total C [mg/L]" ) ),
+		Effects( :Core, :pore water tension, :inoculant ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "Total C [mg/L]" ) << {Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	)
+);

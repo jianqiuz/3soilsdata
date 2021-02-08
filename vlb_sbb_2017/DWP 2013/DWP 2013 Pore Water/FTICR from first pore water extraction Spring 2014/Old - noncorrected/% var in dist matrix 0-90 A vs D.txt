@@ -1,0 +1,26 @@
+
+NMS 0-90 A vs D  % var in dist matrix
+
+Coefficients of determination for the correlations between ordination
+distances and distances in the original n-dimensional space:
+
+            R Squared
+Axis   Increment   Cumulative
+ 1       .567        .567
+ 2       .246        .813
+ 3       .153        .966
+
+Increment and cumulative R-squared were adjusted for any lack
+of orthogonality of axes.
+
+Axis pair     r     Orthogonality,% = 100(1-r^2)
+  1 vs 2     0.000    100.0
+  1 vs 3     0.000    100.0
+  2 vs 3     0.000    100.0
+
+Number of entities = 50
+Number of entity pairs used in correlation = 1225
+Distance measure for ORIGINAL distance: Sorensen (Bray-Curtis)
+
+***************************** Operation completed *****************************
+15 Jan 2015, 16:47

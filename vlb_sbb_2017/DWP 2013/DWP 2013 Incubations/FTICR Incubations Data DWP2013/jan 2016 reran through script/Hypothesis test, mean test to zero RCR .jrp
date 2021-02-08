@@ -1,0 +1,37 @@
+﻿Open(
+	"C:\Users\SMIT467\Documents\DWP Experiments\DWP 2013\DWP 2013 Incubations\FT-ICR data\jan 2016 reran through script\normalized RCR.jmp"
+);
+Distribution(
+	Continuous Distribution(
+		Column( :RCR_ UnSaturated_Hydrocarbons_NA ),
+		Test Mean( 0 )
+	),
+	Continuous Distribution( Column( :RCR_ Proteins_NA ), Test Mean( 0 ) ),
+	Continuous Distribution( Column( :RCR_ Tannins_NA ), Test Mean( 0 ) ),
+	Continuous Distribution( Column( :RCR_ Compounds_NA ), Test Mean( 0 ) ),
+	Continuous Distribution(
+		Column( :Name( "log(1+ RCRatio) Lipids_NA" ) ),
+		Test Mean( 0 )
+	),
+	Continuous Distribution(
+		Column( :Name( "log(1+ RCRatio) Condensed_Hydrocarbons_NA" ) ),
+		Test Mean( 0 )
+	),
+	Continuous Distribution(
+		Column( :Name( "log(1+ RCRatio) Amino_Sugars_NA" ) ),
+		Test Mean( 0 )
+	),
+	Continuous Distribution(
+		Column( :Name( "log(1+ RCRatio) Carbohydrates_NA" ) ),
+		Test Mean( 0 )
+	),
+	Continuous Distribution(
+		Column( :Name( "log(1+ RCRatio) Lignin_NA" ) ),
+		Test Mean( 0 )
+	),
+	Continuous Distribution(
+		Column( :Name( "log(1 +RCR Aromatic/aliphatic)" ) ),
+		Test Mean( 0 )
+	),
+	By( :treatment )
+);

@@ -1,0 +1,23 @@
+
+****************************** Output from Graph ******************************
+PC-ORD 6.0
+18 May 2015, 10:55
+
+Correlations w/ matrix Norm % DWP2013
+
+Pearson and Kendall Correlations with Ordination Axes   N= 50
+
+Axis:               1                    2                    3
+             r      r-sq   tau    r      r-sq   tau    r      r-sq   tau
+
+Lipid       .814   .663   .700  -.531   .282  -.207
+Unsatura    .347   .121   .252   .358   .128   .042
+Proteins    .836   .699   .603   .187   .035   .282
+Lignin     -.392   .154  -.259   .739   .546   .474
+carbohyd   -.176   .031  -.166   .610   .372   .231
+Amino su    .201   .041   .234   .754   .569   .359
+Tannins    -.814   .663  -.664  -.179   .032  -.130
+Condense   -.943   .890  -.770  -.289   .083  -.256
+
+***************************** Operation completed *****************************
+18 May 2015, 10:55

@@ -1,0 +1,17 @@
+
+****************************** Output from Graph ******************************
+PC-ORD 6.0
+2 Mar 2016, 15:13
+
+NMS molecular %_corr with second matrix
+
+Pearson and Kendall Correlations with Ordination Axes   N= 28
+
+Axis:               1                    2                    3
+             r      r-sq   tau    r      r-sq   tau    r      r-sq   tau
+
+TC [mg/l    .277   .077   .307   .516   .266   .323   .301   .090   .196
+TN [mg/l    .137   .019   .286   .428   .183   .323   .376   .141   .249
+
+***************************** Operation completed *****************************
+2 Mar 2016, 15:13

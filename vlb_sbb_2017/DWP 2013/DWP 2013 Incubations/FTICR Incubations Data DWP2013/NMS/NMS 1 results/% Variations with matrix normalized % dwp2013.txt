@@ -1,0 +1,23 @@
+
+% Variations w/ matrix Norm % DWP2013
+
+Coefficients of determination for the correlations between ordination
+distances and distances in the original n-dimensional space:
+
+            R Squared
+Axis   Increment   Cumulative
+ 1       .671        .671
+ 2       .295        .966
+
+Increment and cumulative R-squared were adjusted for any lack
+of orthogonality of axes.
+
+Axis pair     r     Orthogonality,% = 100(1-r^2)
+  1 vs 2     0.000    100.0
+
+Number of entities = 50
+Number of entity pairs used in correlation = 1225
+Distance measure for ORIGINAL distance: Sorensen (Bray-Curtis)
+
+***************************** Operation completed *****************************
+18 May 2015, 10:57

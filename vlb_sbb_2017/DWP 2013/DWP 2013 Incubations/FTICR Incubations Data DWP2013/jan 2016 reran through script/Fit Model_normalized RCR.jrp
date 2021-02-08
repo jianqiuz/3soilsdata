@@ -1,0 +1,165 @@
+﻿Open(
+	"C:\Users\SMIT467\Documents\DWP Experiments\DWP 2013\DWP 2013 Incubations\FT-ICR data\jan 2016 reran through script\normalized RCR.jmp"
+);
+Fit Group(
+	Fit Model(
+		Y( :RCR_ UnSaturated_Hydrocarbons_NA ),
+		Effects( :poresize, :treatment, :treatment * :poresize ),
+		Random Effects( :core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Effect Leverage" ),
+		Run(
+			:RCR_ UnSaturated_Hydrocarbons_NA << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :RCR_ Proteins_NA ),
+		Effects( :poresize, :treatment, :treatment * :poresize ),
+		Random Effects( :core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Effect Leverage" ),
+		Run(
+			:RCR_ Proteins_NA << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 ), {:treatment
+			 * :poresize << {LSMeans Plot( 1 )}}}
+		)
+	),
+	Fit Model(
+		Y( :RCR_ Tannins_NA ),
+		Effects( :poresize, :treatment, :treatment * :poresize ),
+		Random Effects( :core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Effect Leverage" ),
+		Run(
+			:RCR_ Tannins_NA << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :RCR_ Compounds_NA ),
+		Effects( :poresize, :treatment, :treatment * :poresize ),
+		Random Effects( :core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Effect Leverage" ),
+		Run(
+			:RCR_ Compounds_NA << {Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "log(1+ RCRatio) Lipids_NA" ) ),
+		Effects( :poresize, :treatment, :treatment * :poresize ),
+		Random Effects( :core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Effect Leverage" ),
+		Run(
+			:Name( "log(1+ RCRatio) Lipids_NA" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "log(1+ RCRatio) Condensed_Hydrocarbons_NA" ) ),
+		Effects( :poresize, :treatment, :treatment * :poresize ),
+		Random Effects( :core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Effect Leverage" ),
+		Run(
+			:Name( "log(1+ RCRatio) Condensed_Hydrocarbons_NA" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "log(1+ RCRatio) Amino_Sugars_NA" ) ),
+		Effects( :poresize, :treatment, :treatment * :poresize ),
+		Random Effects( :core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Effect Leverage" ),
+		Run(
+			:Name( "log(1+ RCRatio) Amino_Sugars_NA" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "log(1+ RCRatio) Carbohydrates_NA" ) ),
+		Effects( :poresize, :treatment, :treatment * :poresize ),
+		Random Effects( :core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Effect Leverage" ),
+		Run(
+			:Name( "log(1+ RCRatio) Carbohydrates_NA" ) <<
+			{Analysis of Variance( 0 ), Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "log(1+ RCRatio) Lignin_NA" ) ),
+		Effects( :poresize, :treatment, :treatment * :poresize ),
+		Random Effects( :core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Effect Leverage" ),
+		Run(
+			:Name( "log(1+ RCRatio) Lignin_NA" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	Fit Model(
+		Y( :Name( "log(1 +RCR Aromatic/aliphatic)" ) ),
+		Effects( :poresize, :treatment, :treatment * :poresize ),
+		Random Effects( :core ),
+		Personality( "Standard Least Squares" ),
+		Method( "REML" ),
+		Emphasis( "Effect Leverage" ),
+		Run(
+			:Name( "log(1 +RCR Aromatic/aliphatic)" ) << {Analysis of Variance( 0 ),
+			Lack of Fit( 0 ), Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 )}
+		)
+	),
+	SendToReport(
+		Dispatch(
+			{"Response RCR_ UnSaturated_Hydrocarbons_NA", "Whole Model"},
+			"Parameter Estimates",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response RCR_ UnSaturated_Hydrocarbons_NA", "Whole Model"},
+			"REML Variance Component Estimates",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch(
+			{"Response RCR_ Proteins_NA", "Whole Model"},
+			"Parameter Estimates",
+			OutlineBox,
+			{Close( 1 )}
+		),
+		Dispatch( {}, "Response RCR_ Tannins_NA", OutlineBox, {Close( 1 )} ),
+		Dispatch(
+			{"Response RCR_ Tannins_NA", "Whole Model"},
+			"Parameter Estimates",
+			OutlineBox,
+			{Close( 1 )}
+		)
+	)
+);
