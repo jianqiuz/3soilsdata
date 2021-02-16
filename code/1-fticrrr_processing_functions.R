@@ -148,7 +148,7 @@ make_fticr_data = function(report, data_columns, corekey, ...){
 #    mutate(CoreID = str_replace_all(CoreID, "DOC_", "DOC")) %>% 
 #    mutate(DOC_ID = str_extract(CoreID, "DOC[0-9]{3}")) %>% 
 #    mutate(DOC_ID = str_replace(DOC_ID, "DOC", "DOC-")) %>% 
-    dplyr::select(formula, CoreID, presence) %>% 
+    dplyr::select(formula, CoreID, presence) %>%
     drop_na()
     
   
