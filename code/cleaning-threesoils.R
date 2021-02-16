@@ -1,7 +1,5 @@
-library(tidyverse)
-library(readxl)
-library(drake)
 
+source("code/0-packages.R")
 source("code/1-fticrrr_processing_functions.R")
 
 
