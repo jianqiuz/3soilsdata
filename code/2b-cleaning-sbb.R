@@ -1,11 +1,15 @@
+## drake plan to clean and process FTICR-MS data for 2017 SBB
+## Kaizad F. Patel
+## Feb 16, 2021
 
+
+# source relevant functions/packages --------------------------------------
 source("code/0-packages.R")
 source("code/1-fticrrr_processing_functions.R")
 
 
-
-
-# functions ---------------------------------------------------------------
+# clean input data --------------------------------------------------------
+# get the input corekey in the correct format for the plan/functions
 clean_corekey = function(fticr_corekey){
   fticr_corekey  %>% 
     rename(FTICR_name = `Malak.s.ID`) %>% 
@@ -27,8 +31,9 @@ prep_fticr_file = function(report_raw){
 }
 
 
-
 # plan --------------------------------------------------------------------
+# this is in drake, so it will re-run only if targets need to be updated
+
 sbb_fticr_processing_plan = 
   drake_plan(
     fticr_corekey = read.csv("data/vlb_sbb_2017_subset/sample_key.csv", na.strings = ""),

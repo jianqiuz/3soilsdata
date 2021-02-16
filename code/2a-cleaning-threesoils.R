@@ -1,9 +1,15 @@
+## drake plan to clean and process FTICR-MS data for 3Soils
+## Kaizad F. Patel
+## Feb 16, 2021
 
+
+# source relevant functions/packages --------------------------------------
 source("code/0-packages.R")
 source("code/1-fticrrr_processing_functions.R")
 
 
-
+# clean input data --------------------------------------------------------
+# get the input corekey in the correct format for the plan/functions
 
 clean_corekey = function(fticr_corekey){
   fticr_corekey  %>% 
@@ -14,6 +20,10 @@ clean_corekey = function(fticr_corekey){
                               "Saturation Incubation" = "flood", "Time Zero Saturation" = "time zero")) %>% 
     force()
 }
+
+
+# processing plan ---------------------------------------------------------
+# this is in drake, so it will re-run only if targets need to be updated
 
 threesoils_fticr_processing_plan = 
   drake_plan(
